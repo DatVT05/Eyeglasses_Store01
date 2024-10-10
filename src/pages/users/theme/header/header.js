@@ -1,48 +1,78 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
+import { AiOutlineUser } from "react-icons/ai";
 import "./header.scss";
-import { CiSearch, CiShoppingBasket } from "react-icons/ci"; // Importing icons
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
+const MainHeaderTop = () => {
+  return (
+    <div className="main-header-top">
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-xs-12 col-md-8 text-left">
+            <span>GIẢM NGAY 15% CHO ĐƠN HÀNG ĐẦU TIÊN</span>
+          </div>
+          <div className="col-xs-6 col-md-4 text-right header-icons">
+            <div className="col-lg-3 items-center">
+              <nav>
+                <ul className="col-lg-3">
+                  <li className="rounded">
+                    <Link to="/chinh-sach">Chính sách</Link>
+                  </li>
+                  <li className="rounded">
+                    <Link to="/tra-cuu-don-hang">Tra cứu đơn hàng</Link>
+                  </li>
+                  <li className="rounded">
+                    <Link to="/tai-khoan">
+                      <AiOutlineUser />
+                      Tài khoản
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const HeaderMenuTop = () => {
+  return (
+    <div className="header-menu-top">
+      <div className="container">
+        <div className="row">
+          <div className="col-xl-3">
+            <div className="header_logo">
+              <h1>King's Wear</h1>
+            </div>
+          </div>
+          <div className="col-xl-6">
+            <div>MENUS</div>
+          </div>
+          <div className="col-xl-3">
+            <ul>
+              <li>
+                <Link to="#">
+                  <AiOutlineShoppingCart />
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Combined Header Component
 const Header = () => {
   return (
     <header className="main-header">
-  <div className="container">
-    <div className="row align-items-center">
-      {/* Logo */}
-      <div className="col-lg-3 col-md-3 col-sm-3 col-12 text-left">
-        <Link to="/" className="logo">
-          <img className="img-fluid" src="/path-to-your-logo.png" alt="KING EYEWEAR" />
-        </Link>
-      </div>
-
-      {/* Navigation */}
-      <div className="col-lg-6 col-md-6 col-sm-6 col-12">
-        <nav className="nav-menu">
-          <ul className="menu">
-            <li><Link to="/san-pham">Sản phẩm</Link></li>
-            <li><Link to="/best-seller">Best seller</Link></li>
-            <li><Link to="/dich-vu">Dịch vụ</Link></li>
-            <li><Link to="/uu-dai">Ưu đãi</Link></li>
-            <li><Link to="/goc-lily">Góc Lily</Link></li>
-            <li><Link to="/khach-hang">Khách hàng</Link></li>
-            <li><Link to="/tra-cuu-don">Tra cứu đơn</Link></li>
-          </ul>
-        </nav>
-      </div>
-
-      {/* Icons */}
-      <div className="col-lg-3 col-md-3 col-sm-3 col-12 text-right header-icons">
-        <span className="search-icon">
-          <CiSearch size={24} />
-        </span>
-        <span className="cart-icon">
-          <CiShoppingBasket size={24} />
-          <span className="cart-count">0</span>
-        </span>
-      </div>
-    </div>
-  </div>
-</header>
+      <MainHeaderTop />
+      <HeaderMenuTop />
+    </header>
   );
 };
 
