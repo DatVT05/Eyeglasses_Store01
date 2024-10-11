@@ -3,6 +3,7 @@ import HomePage from "./pages/users/homePage";
 import { ROUTERS } from "./utils/router";
 import MasterLayout from "./pages/users/theme/masterLayout/masterLayout";
 import ProfilePage from "./pages/users/profilePage"; 
+import LoginPage from "pages/users/loginPage/LoginPage";
 import CartPage from './pages/cart/CartPage';
 import CheckoutPage from './pages/Checkout/CheckoutPage';
 import PaymentPolicyPage from './pages/Policies/PaymentPolicyPage';
@@ -19,6 +20,10 @@ const renderUserRouter = () => {
         {
             path: ROUTERS.USER.PROFILE,
             component: <ProfilePage />
+        },
+        {
+            path: ROUTERS.USER.LOGINPAGE,
+            component: <LoginPage />
         },
         {
             path: ROUTERS.USER.CART,

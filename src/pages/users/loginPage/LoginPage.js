@@ -65,7 +65,7 @@ const LoginPage = () => {
           </div>
         </form>
         <div className="register-link">
-          <p>Bạn chưa có tài khoản Anna?</p>
+          <p>Bạn chưa có tài khoản?</p>
           <Link to="/register">Đăng ký ngay</Link>
         </div>
       </div>
