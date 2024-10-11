@@ -1,0 +1,139 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+  
+    .login-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+  
+      h2 {
+        margin-bottom: 10px;
+        font-size: 24px;
+        color: #333;
+      }
+  
+      p {
+        margin-bottom: 20px;
+        color: #666;
+      }
+  
+      .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+  
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+          color: #333;
+        }
+  
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          outline: none;
+          &:focus {
+            border-color: #3cc5d2;
+          }
+        }
+      }
+  
+      .remember-me {
+        display: flex;
+        align-items: center;
+  
+        input {
+          margin-right: 5px;
+        }
+  
+        label {
+          margin: 0;
+          color: #666;
+        }
+      }
+  
+      .login-button {
+        width: 100%;
+        padding: 10px;
+        background-color: #3cc5d2;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: #32b3bf;
+        }
+      }
+  
+      .forgot-password {
+        margin-top: 10px;
+        a {
+          color: #3cc5d2;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+  
+      .social-login {
+        margin-top: 20px;
+  
+        .google-login {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #fff;
+          color: #666;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          width: 100%;
+          padding: 10px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          font-size: 14px;
+  
+          .google-icon {
+            margin-right: 8px;
+          }
+  
+          span {
+            font-weight: bold;
+          }
+  
+          &:hover {
+            background-color: #f9f9f9;
+          }
+        }
+      }
+  
+      .register-link {
+        margin-top: 20px;
+        p {
+          color: #666;
+          margin-bottom: 5px;
+        }
+        a {
+          color: #3cc5d2;
+          font-weight: bold;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  

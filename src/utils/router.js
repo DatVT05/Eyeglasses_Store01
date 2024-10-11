@@ -1,11 +1,14 @@
 export const ROUTERS = {
     USER: {
-        HOME: "/",
+        HOME: "",
         PROFILE: "/profile",
-        CART: "/cart",
+        CART: "/cart/cartpage",
         CHECKOUT: "/checkout",
         RETURN_POLICY: "/policy/return",
         SHIPPING_POLICY: "/policy/shipping",
-        PRIVACY_POLICY: "/policy/privacy"
+        WARRANTY_POLICY: "/policy/warranty",
+        PRIVACY_POLICY: "/policy/privacy",
+        PAYMENT_POLICY: "/policy/payment",
+        PRODUCT_INFO: "/product/:productId"
     }
 };

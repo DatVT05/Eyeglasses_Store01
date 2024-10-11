@@ -4,6 +4,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import "./header.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+//import { ROUTERS } from "./src/utils/router";
 
 const MainHeaderTop = () => {
   return (
@@ -17,7 +18,7 @@ const MainHeaderTop = () => {
             <nav className="header-icons">
               <ul className="nav-icons">
                 <li className="rounded">
-                  <Link to="/chinh-sach">Chính sách</Link>
+                  <Link to="">Chính sách</Link>
                 </li>
                 <li className="rounded">
                   <Link to="/tai-khoan">
@@ -48,18 +49,30 @@ const HeaderMenuTop = () => {
         <li className="nav-item">
           Sản phẩm
           <ul className="dropdown">
-            <li><Link to="/san-pham/gong-kinh-can">Gọng kính cận</Link></li>
-            <li><Link to="/san-pham/trong-kinh">Tròng kính</Link></li>
-            <li><Link to="/san-pham/phu-kien">Phụ kiện</Link></li>
+            <li>
+              <Link to="/san-pham/gong-kinh-can">Gọng kính cận</Link>
+            </li>
+            <li>
+              <Link to="/san-pham/trong-kinh">Tròng kính</Link>
+            </li>
+            <li>
+              <Link to="/san-pham/phu-kien">Phụ kiện</Link>
+            </li>
           </ul>
         </li>
         <li className="nav-item">Best seller</li>
         <li className="nav-item">
           Dịch vụ
           <ul className="dropdown">
-            <li><Link to="/dich-vu/bao-hanh">Chính sách bảo hành</Link></li>
-            <li><Link to="/dich-vu/doi-tra">Đổi trả trong 30 ngày</Link></li>
-            <li><Link to="/dich-vu/thu-cu-doi-moi">Thu Cũ - Đổi Mới</Link></li>
+            <li>
+              <Link to="/dich-vu/bao-hanh">Chính sách bảo hành</Link>
+            </li>
+            <li>
+              <Link to="/dich-vu/doi-tra">Đổi trả trong 30 ngày</Link>
+            </li>
+            <li>
+              <Link to="/dich-vu/thu-cu-doi-moi">Thu Cũ - Đổi Mới</Link>
+            </li>
           </ul>
         </li>
         <li className="nav-item">Ưu đãi</li>
@@ -88,7 +101,6 @@ const HeaderMenuTop = () => {
   );
 };
 
-// Combined Header Component
 const Header = () => {
   return (
     <header className="main-header">

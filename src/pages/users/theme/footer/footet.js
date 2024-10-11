@@ -2,6 +2,7 @@ import React from "react";
 import "./footer.scss";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
+//import { ROUTERS } from "./src/utils/router";
 
 const Footer = () => {
   return (
@@ -54,13 +55,17 @@ const Footer = () => {
           </div>
           <div className="footer-links">
             <h3>Chính Sách Mua Hàng</h3>
-            <Link to="/chinh-sach/thanh-toan">Hình thức thanh toán</Link>
-            <Link to="/chinh-sach/giao-hang">Chính sách giao hàng</Link>
-            <Link to="/chinh-sach/bao-hanh">Chính sách bảo hành</Link>
+            <Link to="">Hình thức thanh toán</Link>
+            <Link to="">Chính sách giao hàng</Link>
+            <Link to="">Chính sách bảo hành</Link>
           </div>
           <div className="footer-legal">
             <p>MST: 0209206036</p>
-            <img src="path-to-verified-image.png" alt="Verified" className="verified-badge" />
+            <img
+              src="path-to-verified-image.png"
+              alt="Verified"
+              className="verified-badge"
+            />
           </div>
         </div>
         <div className="footer-bottom">
