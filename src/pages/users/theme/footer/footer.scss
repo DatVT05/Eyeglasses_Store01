@@ -1,0 +1,154 @@
+.footer {
+    background-color: #ffff;
+    padding: 40px 0;
+    color: #333;
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  
+    .footer-top {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+  
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd; // Gray border
+        border-radius: 20px;
+        padding: 10px 20px;
+        color: #000;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-decoration: none; // Remove underline from Link
+        transition: background-color 0.3s ease, color 0.3s ease;
+        cursor: pointer; // Show hand cursor on hover
+  
+        &:hover {
+          background-color: #ff9900;
+          color: #fff;
+        }
+  
+        .icon {
+          font-size: 24px;
+        }
+      }
+    }
+  
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+      color: #333;
+  
+      .footer-logo {
+        flex: 1;
+        min-width: 200px;
+  
+        h2 {
+          color: #000;
+          margin-bottom: 10px;
+        }
+  
+        .subscription-form {
+          display: flex;
+          margin-top: 10px;
+  
+          input {
+            padding: 10px;
+            border-radius: 20px 0 0 20px;
+            border: none;
+            flex: 1;
+            background: #f3f3f3;
+          }
+  
+          button {
+            background-color: #ff9900;
+            color: #fff;
+            padding: 0 15px;
+            border-radius: 0 20px 20px 0;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+          }
+        }
+  
+        .social-media {
+          display: flex;
+          gap: 10px;
+          margin-top: 15px;
+  
+          .icon {
+            font-size: 24px;
+            color: #333;
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            
+            &:hover {
+              background-color: #ff9900;
+              color: #fff;
+            }
+          }
+        }
+      }
+  
+      .footer-links {
+        flex: 1;
+        min-width: 150px;
+  
+        h3 {
+          margin-bottom: 10px;
+          color: #000;
+          font-weight: bold;
+        }
+  
+        a {
+          display: block;
+          color: #333;
+          margin-bottom: 5px;
+          text-decoration: none;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: #ff9900;
+          }
+        }
+  
+        p {
+          color: #555;
+          margin-bottom: 5px;
+        }
+      }
+  
+      .footer-legal {
+        flex: 1;
+        min-width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        .verified-badge {
+          margin-top: 10px;
+          width: 80px;
+        }
+      }
+    }
+  
+    .footer-bottom {
+      margin-top: 20px;
+      text-align: center;
+      color: #333;
+      font-size: 14px;
+    }
+  }
+  

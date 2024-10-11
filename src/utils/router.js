@@ -1,6 +1,11 @@
 export const ROUTERS = {
     USER: {
-        HOME: "",
-        PROFILE: "thong-tin-ca-nhan"
-    },
+        HOME: "/",
+        PROFILE: "/profile",
+        CART: "/cart",
+        CHECKOUT: "/checkout",
+        RETURN_POLICY: "/policy/return",
+        SHIPPING_POLICY: "/policy/shipping",
+        PRIVACY_POLICY: "/policy/privacy"
+    }
 };
