@@ -18,10 +18,10 @@ const MainHeaderTop = () => {
             <nav className="header-icons">
               <ul className="nav-icons">
                 <li className="rounded">
-                  <Link to="">Chính sách</Link>
+                  <Link to="/policy/warranty">Chính sách</Link>
                 </li>
                 <li className="rounded">
-                  <Link to="/tai-khoan">
+                  <Link to="/loginpage">
                     <AiOutlineUser />
                     Tài khoản
                   </Link>
@@ -50,13 +50,13 @@ const HeaderMenuTop = () => {
           Sản phẩm
           <ul className="dropdown">
             <li>
-              <Link to="/san-pham/gong-kinh-can">Gọng kính cận</Link>
+              <Link to="/Products/gong-kinh-can">Gọng kính cận</Link>
             </li>
             <li>
-              <Link to="/san-pham/trong-kinh">Tròng kính</Link>
+              <Link to="/Products/trong-kinh">Tròng kính</Link>
             </li>
             <li>
-              <Link to="/san-pham/phu-kien">Phụ kiện</Link>
+              <Link to="/Products/phu-kien">Phụ kiện</Link>
             </li>
           </ul>
         </li>
@@ -65,19 +65,19 @@ const HeaderMenuTop = () => {
           Dịch vụ
           <ul className="dropdown">
             <li>
-              <Link to="/dich-vu/bao-hanh">Chính sách bảo hành</Link>
+              <Link to="/policy/warranty">Chính sách bảo hành</Link>
             </li>
             <li>
-              <Link to="/dich-vu/doi-tra">Đổi trả trong 30 ngày</Link>
+              <Link to="/policy/return">Đổi trả trong 30 ngày</Link>
             </li>
             <li>
-              <Link to="/dich-vu/thu-cu-doi-moi">Thu Cũ - Đổi Mới</Link>
+              <Link to="/policy/exchange">Thu Cũ - Đổi Mới</Link>
             </li>
           </ul>
         </li>
         <li className="nav-item">Ưu đãi</li>
         <li className="nav-item">Khách hàng</li>
-        <li className="nav-item">Tra cứu đơn</li>
+        <li className="nav-item"><Link to="/track-order" style={{ textDecoration: 'none' }}>Tra cứu đơn</Link></li>
       </ul>
       <div className="icons">
         <div className="search-container">

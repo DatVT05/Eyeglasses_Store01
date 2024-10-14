@@ -51,18 +51,18 @@ const Footer = () => {
           <div className="footer-links">
             <h3>Thông Tin Liên Hệ</h3>
             <p>190005951</p>
-            <p>marketing@kingswear.com</p>
+            <p>marketing@kingseyewear.com</p>
           </div>
           <div className="footer-links">
             <h3>Chính Sách Mua Hàng</h3>
-            <Link to="">Hình thức thanh toán</Link>
-            <Link to="">Chính sách giao hàng</Link>
-            <Link to="">Chính sách bảo hành</Link>
+            <Link to="/policy/payment">Hình thức thanh toán</Link>
+            <Link to="/policy/shipping">Chính sách giao hàng</Link>
+            <Link to="/policy/warranty">Chính sách bảo hành</Link>
           </div>
           <div className="footer-legal">
             <p>MST: 0209206036</p>
             <img
-              src="path-to-verified-image.png"
+              src="/public/images/verified-stamp.jpg"
               alt="Verified"
               className="verified-badge"
             />

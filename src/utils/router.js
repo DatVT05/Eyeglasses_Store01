@@ -1,7 +1,7 @@
 export const ROUTERS = {
     USER: {
         HOME: "",
-        LOGIN:"/admin/loginpage",
+        LOGIN:"/loginpage",
         PROFILE: "/profile",
         CART: "/cart/cartpage",
         CHECKOUT: "/checkout",
@@ -10,6 +10,8 @@ export const ROUTERS = {
         WARRANTY_POLICY: "/policy/warranty",
         PRIVACY_POLICY: "/policy/privacy",
         PAYMENT_POLICY: "/policy/payment",
+        EXCHANGE_POLICY: "/policy/exchange",
+        ORDER_TRACKING: "/track-order",
         PRODUCT_INFO: "/product/:productId"
     }
 };

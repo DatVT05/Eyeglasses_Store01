@@ -1,0 +1,77 @@
+.order-tracking-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #666;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      text-align: left;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      font-size: 14px;
+      border-radius: 25px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      color: #999;
+      outline: none;
+      transition: border 0.3s ease;
+      
+      &::placeholder {
+        color: #ddd;
+      }
+
+      &:focus {
+        border: 1px solid #999;
+      }
+    }
+  }
+
+  button {
+    background-color: #4dd0e1;
+    color: #fff;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+
+    &:hover {
+      background-color: #26c6da;
+    }
+  }
+
+  .error {
+    color: red;
+    margin-top: 15px;
+  }
+
+  .order-details {
+    margin-top: 30px;
+    text-align: left;
+  }
+}

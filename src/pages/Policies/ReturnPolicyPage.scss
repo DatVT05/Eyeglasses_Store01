@@ -1,0 +1,37 @@
+.return-policy-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    
+    h1, h2, h3 {
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+  
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+  
+    ul {
+      list-style-type: disc;
+    }
+  
+    ol {
+      list-style-type: decimal;
+    }
+  
+    li {
+      margin-bottom: 10px;
+      color: #555;
+    }
+  }
+  

@@ -3,13 +3,16 @@ import HomePage from "./pages/users/homePage";
 import { ROUTERS } from "./utils/router";
 import MasterLayout from "./pages/users/theme/masterLayout/masterLayout";
 import ProfilePage from "./pages/users/profilePage"; 
-import LoginPage from "pages/users/loginPage/LoginPage";
+import LoginPage from "./pages/users/loginPage/LoginPage";
 import CartPage from './pages/cart/CartPage';
 import CheckoutPage from './pages/Checkout/CheckoutPage';
 import PaymentPolicyPage from './pages/Policies/PaymentPolicyPage';
 import ShippingPolicyPage from './pages/Policies/ShippingPolicyPage';
 import WarrantyPolicyPage from './pages/Policies/WarrantyPolicyPage';
+import ReturnPolicyPage from "pages/Policies/ReturnPolicyPage";
+import ExchangePolicyPage from "pages/Policies/ExchangePolicyPage";
 import ProductInfo from './pages/Products/ProductInfo';
+import OrderTrackingPage from './pages/Order/OrderTrackingPage';
 
 const renderUserRouter = () => {
     const userRouters = [
@@ -42,12 +45,24 @@ const renderUserRouter = () => {
             component: <ShippingPolicyPage />
         },
         {
-            path: ROUTERS.USER.PRODUCT_INFO,
-            component: <ProductInfo />
+            path: ROUTERS.USER.RETURN_POLICY,
+            component: <ReturnPolicyPage />
         },
         {
             path: ROUTERS.USER.WARRANTY_POLICY,
             component: <WarrantyPolicyPage />
+        },
+        {
+            path: ROUTERS.USER.EXCHANGE_POLICY,
+            component: <ExchangePolicyPage />
+        },
+        {
+            path: ROUTERS.USER.PRODUCT_INFO,
+            component: <ProductInfo />
+        },
+        {
+            path: ROUTERS.USER.ORDER_TRACKING,
+            component: <OrderTrackingPage />
         }
     ];
 
