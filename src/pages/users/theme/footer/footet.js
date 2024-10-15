@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer-top">
-          <Link to="/bao-hanh" className="feature-item">
+          <Link to="/policy/warranty" className="feature-item">
             <span className="icon">💠</span>
             <span>Bảo hành trọn đời</span>
           </Link>
@@ -17,11 +17,11 @@ const Footer = () => {
             <span className="icon">🌱</span>
             <span>Đo mắt miễn phí</span>
           </Link>
-          <Link to="/thu-cu-doi-moi" className="feature-item">
+          <Link to="/policy/exchange" className="feature-item">
             <span className="icon">♻️</span>
             <span>Thu cũ đổi mới</span>
           </Link>
-          <Link to="/ve-sinh-bao-quan" className="feature-item">
+          <Link to="/policy/cleaning" className="feature-item">
             <span className="icon">🧼</span>
             <span>Vệ sinh và bảo quản kính</span>
           </Link>

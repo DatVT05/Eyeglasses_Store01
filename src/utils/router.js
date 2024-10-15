@@ -5,6 +5,7 @@ export const ROUTERS = {
         PROFILE: "/profile",
         CART: "/cart/cartpage",
         CHECKOUT: "/checkout",
+        CLEAN_POLICY: "/policy/cleaning",
         RETURN_POLICY: "/policy/return",
         SHIPPING_POLICY: "/policy/shipping",
         WARRANTY_POLICY: "/policy/warranty",
@@ -12,6 +13,7 @@ export const ROUTERS = {
         PAYMENT_POLICY: "/policy/payment",
         EXCHANGE_POLICY: "/policy/exchange",
         ORDER_TRACKING: "/track-order",
-        PRODUCT_INFO: "/product/:productId"
+        PRODUCT_INFO: "/product/:productId",
+        GLASSES_FRAME: "/products/glassesframe",
     }
 };

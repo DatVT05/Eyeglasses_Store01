@@ -50,13 +50,16 @@ const HeaderMenuTop = () => {
           Sản phẩm
           <ul className="dropdown">
             <li>
-              <Link to="/Products/gong-kinh-can">Gọng kính cận</Link>
+              <Link to="/products/glassesframe">Gọng kính cận</Link>
             </li>
             <li>
               <Link to="/Products/trong-kinh">Tròng kính</Link>
             </li>
             <li>
-              <Link to="/Products/phu-kien">Phụ kiện</Link>
+              <Link to="/Products/phu-kien">Kính râm</Link>
+            </li>
+            <li>
+              <Link to="/Products/phu-kien">Kính râm trẻ em</Link>
             </li>
           </ul>
         </li>

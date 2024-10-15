@@ -9,10 +9,13 @@ import CheckoutPage from './pages/Checkout/CheckoutPage';
 import PaymentPolicyPage from './pages/Policies/PaymentPolicyPage';
 import ShippingPolicyPage from './pages/Policies/ShippingPolicyPage';
 import WarrantyPolicyPage from './pages/Policies/WarrantyPolicyPage';
-import ReturnPolicyPage from "pages/Policies/ReturnPolicyPage";
-import ExchangePolicyPage from "pages/Policies/ExchangePolicyPage";
+import ReturnPolicyPage from "./pages/Policies/ReturnPolicyPage";
+import ExchangePolicyPage from "./pages/Policies/ExchangePolicyPage";
 import ProductInfo from './pages/Products/ProductInfo';
 import OrderTrackingPage from './pages/Order/OrderTrackingPage';
+import CleaningPolicyPage from './pages/Policies/CleaningPolicyPage';
+import GlassesFramePage from "./pages/Products/GlassesFramePage";
+
 
 const renderUserRouter = () => {
     const userRouters = [
@@ -35,6 +38,10 @@ const renderUserRouter = () => {
         {
             path: ROUTERS.USER.CHECKOUT,
             component: <CheckoutPage />
+        },
+        {
+            path: ROUTERS.USER.CLEAN_POLICY,
+            component: <CleaningPolicyPage />
         },
         {
             path: ROUTERS.USER.PAYMENT_POLICY,
@@ -63,7 +70,11 @@ const renderUserRouter = () => {
         {
             path: ROUTERS.USER.ORDER_TRACKING,
             component: <OrderTrackingPage />
-        }
+        },
+        {
+            path: ROUTERS.USER.GlASSES_FRAME,
+            component: <GlassesFramePage />
+        },
     ];
 
     return (
