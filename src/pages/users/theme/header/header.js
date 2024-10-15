@@ -4,7 +4,6 @@ import { AiOutlineUser } from "react-icons/ai";
 import "./header.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-//import { ROUTERS } from "./src/utils/router";
 
 const MainHeaderTop = () => {
   return (
@@ -53,13 +52,13 @@ const HeaderMenuTop = () => {
               <Link to="/products/glassesframe">Gọng kính cận</Link>
             </li>
             <li>
-              <Link to="/Products/trong-kinh">Tròng kính</Link>
+              <Link to="/products/lens">Tròng kính</Link>
             </li>
             <li>
-              <Link to="/Products/phu-kien">Kính râm</Link>
+              <Link to="/products/sunglasses">Kính râm</Link>
             </li>
             <li>
-              <Link to="/Products/phu-kien">Kính râm trẻ em</Link>
+              <Link to="/products/sunglasses_kid">Kính râm trẻ em</Link>
             </li>
           </ul>
         </li>
@@ -80,7 +79,11 @@ const HeaderMenuTop = () => {
         </li>
         <li className="nav-item">Ưu đãi</li>
         <li className="nav-item">Khách hàng</li>
-        <li className="nav-item"><Link to="/track-order" style={{ textDecoration: 'none' }}>Tra cứu đơn</Link></li>
+        <li className="nav-item">
+          <Link to="/track-order" style={{ textDecoration: "none" }}>
+            Tra cứu đơn
+          </Link>
+        </li>
       </ul>
       <div className="icons">
         <div className="search-container">
@@ -96,7 +99,9 @@ const HeaderMenuTop = () => {
           )}
         </div>
         <div className="cart-icon">
-          <FontAwesomeIcon icon={faShoppingCart} />
+          <Link to="/cart/cartpage">
+            <FontAwesomeIcon icon={faShoppingCart} />
+          </Link>
           <span className="cart-badge">{cartItems}</span>
         </div>
       </div>

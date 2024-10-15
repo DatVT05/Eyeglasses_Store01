@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./GlassesFramePage.scss";
+import "./SunGlassesKidPage.scss";
 
-const GlassesFramePage = () => {
+const SunGlassesKidPage = () => {
   const [sortBy, setSortBy] = useState("default");
   const products = [
     {
@@ -149,4 +149,4 @@ const GlassesFramePage = () => {
   );
 };
 
-export default GlassesFramePage;
+export default SunGlassesKidPage;

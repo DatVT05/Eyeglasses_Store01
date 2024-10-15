@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from "./pages/users/homePage"; 
 import { ROUTERS } from "./utils/router";
 import MasterLayout from "./pages/users/theme/masterLayout/masterLayout";
@@ -15,6 +15,10 @@ import ProductInfo from './pages/Products/ProductInfo';
 import OrderTrackingPage from './pages/Order/OrderTrackingPage';
 import CleaningPolicyPage from './pages/Policies/CleaningPolicyPage';
 import GlassesFramePage from "./pages/Products/GlassesFramePage";
+import LensPage from "pages/Products/LensPage";
+import SunGlassesPage from "pages/Products/SunGlassesPage";
+import SunGlassesKidPage from "pages/Products/SunGlassesKidPage";
+import PaymentPage from 'pages/Payment/PaymentPage';
 
 
 const renderUserRouter = () => {
@@ -72,8 +76,24 @@ const renderUserRouter = () => {
             component: <OrderTrackingPage />
         },
         {
-            path: ROUTERS.USER.GlASSES_FRAME,
+            path: ROUTERS.USER.GlASSES,
             component: <GlassesFramePage />
+        },
+        {
+            path: ROUTERS.USER.LENS,
+            component: <LensPage />
+        },
+        {
+            path: ROUTERS.USER.SUNGLASSES,
+            component: <SunGlassesPage />
+        },
+        {
+            path: ROUTERS.USER.SUNGLASSESKID,
+            component: <SunGlassesKidPage />
+        },
+        {
+            path: ROUTERS.USER.PAYMENT,
+            component: <PaymentPage />
         },
     ];
 
