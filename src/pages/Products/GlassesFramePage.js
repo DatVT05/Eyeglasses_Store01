@@ -1,65 +1,33 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
 import "./GlassesFramePage.scss";
 
 const GlassesFramePage = () => {
   const [sortBy, setSortBy] = useState("default");
+
   const products = [
     {
       id: 1,
       name: "GK. Gọng Viền Nhựa Titan",
       price: 1600000,
       colors: ["#d4af37", "#000000"],
-      img: "path-to-image",
+      img: "path-to-image-1",
     },
     {
       id: 2,
       name: "GK. Gọng Cấu Kim Loại",
       price: 1600000,
       colors: ["#008000", "#A52A2A"],
-      img: "path-to-image",
+      img: "path-to-image-2",
     },
     {
-        id: 1,
-        name: "GK. Gọng Viền Nhựa Titan",
-        price: 1600000,
-        colors: ["#d4af37", "#000000"],
-        img: "path-to-image",
-      },
-      {
-        id: 2,
-        name: "GK. Gọng Cấu Kim Loại",
-        price: 1600000,
-        colors: ["#008000", "#A52A2A"],
-        img: "path-to-image",
-      },
-      {
-        id: 1,
-        name: "GK. Gọng Viền Nhựa Titan",
-        price: 1600000,
-        colors: ["#d4af37", "#000000"],
-        img: "path-to-image",
-      },
-      {
-        id: 2,
-        name: "GK. Gọng Cấu Kim Loại",
-        price: 1600000,
-        colors: ["#008000", "#A52A2A"],
-        img: "path-to-image",
-      },
-      {
-        id: 1,
-        name: "GK. Gọng Viền Nhựa Titan",
-        price: 1600000,
-        colors: ["#d4af37", "#000000"],
-        img: "path-to-image",
-      },
-      {
-        id: 2,
-        name: "GK. Gọng Cấu Kim Loại",
-        price: 1600000,
-        colors: ["#008000", "#A52A2A"],
-        img: "path-to-image",
-      },
+      id: 3,
+      name: "GK. Gọng Nhựa Cứng",
+      price: 800000,
+      colors: ["#000000", "#FFFFFF"],
+      img: "path-to-image-3",
+    },
+    // Add more product entries as needed
   ];
 
   const handleSort = (e) => {
@@ -74,17 +42,11 @@ const GlassesFramePage = () => {
           <ul>
             <li><input type="checkbox" /> Cam</li>
             <li><input type="checkbox" /> Đen</li>
-            <li><input type="checkbox" /> xanh lá</li>
-            <li><input type="checkbox" /> Xanh dương</li>
+            <li><input type="checkbox" /> Xanh lá</li>
             <li><input type="checkbox" /> Nâu</li>
             <li><input type="checkbox" /> Đỏ</li>
-            <li><input type="checkbox" /> Xanh</li>
             <li><input type="checkbox" /> Ghi</li>
             <li><input type="checkbox" /> Vàng</li>
-            <li><input type="checkbox" /> Hồng</li>
-            <li><input type="checkbox" /> Rêu</li>
-            <li><input type="checkbox" /> Sữa</li>
-            <li><input type="checkbox" /> Vân đá</li>
           </ul>
         </div>
 
@@ -95,7 +57,6 @@ const GlassesFramePage = () => {
             <li><input type="checkbox" /> Kim loại</li>
             <li><input type="checkbox" /> Nhựa</li>
             <li><input type="checkbox" /> Nhựa dẻo</li>
-            <li><input type="checkbox" /> Nhựa pha kim loại</li>
             <li><input type="checkbox" /> Titan</li>
           </ul>
         </div>
@@ -105,11 +66,9 @@ const GlassesFramePage = () => {
           <ul>
             <li><input type="checkbox" /> Browline</li>
             <li><input type="checkbox" /> Chữ nhật</li>
-            <li><input type="checkbox" /> Đa giác</li>
-            <li><input type="checkbox" /> Hình Oval</li>
+            <li><input type="checkbox" /> Oval</li>
             <li><input type="checkbox" /> Hình tròn</li>
             <li><input type="checkbox" /> Hình vuông</li>
-            <li><input type="checkbox" /> Mắt mèo</li>
           </ul>
         </div>
       </div>
@@ -128,7 +87,7 @@ const GlassesFramePage = () => {
         <div className="product-grid">
           {products.map((product) => (
             <div key={product.id} className="product-card">
-              <img src={product.img} alt={product.name} />
+              <img src={product.img} alt={product.name} className="product-image" />
               <h3>{product.name}</h3>
               <p>{product.price.toLocaleString()}đ</p>
               <div className="color-options">
@@ -140,7 +99,9 @@ const GlassesFramePage = () => {
                   ></span>
                 ))}
               </div>
-              <button className="buy-btn">Mua Ngay</button>
+              <Link to={`/product/${product.id}`} className="buy-btn">
+                Xem Chi Tiết
+              </Link>
             </div>
           ))}
         </div>

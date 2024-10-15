@@ -1,66 +1,32 @@
 import React, { useState } from "react";
-import "./SunGlassesPage.scss";
 import { Link } from "react-router-dom"; 
+import "./GlassesFramePage.scss";
 
-const SunGlassesPage = () => {
+const GlassesFramePage = () => {
   const [sortBy, setSortBy] = useState("default");
+
   const products = [
     {
       id: 1,
       name: "GK. Gọng Viền Nhựa Titan",
       price: 1600000,
       colors: ["#d4af37", "#000000"],
-      img: "path-to-image",
+      img: "path-to-image-1",
     },
     {
       id: 2,
       name: "GK. Gọng Cấu Kim Loại",
       price: 1600000,
       colors: ["#008000", "#A52A2A"],
-      img: "path-to-image",
+      img: "path-to-image-2",
     },
     {
-        id: 1,
-        name: "GK. Gọng Viền Nhựa Titan",
-        price: 1600000,
-        colors: ["#d4af37", "#000000"],
-        img: "path-to-image",
-      },
-      {
-        id: 2,
-        name: "GK. Gọng Cấu Kim Loại",
-        price: 1600000,
-        colors: ["#008000", "#A52A2A"],
-        img: "path-to-image",
-      },
-      {
-        id: 1,
-        name: "GK. Gọng Viền Nhựa Titan",
-        price: 1600000,
-        colors: ["#d4af37", "#000000"],
-        img: "path-to-image",
-      },
-      {
-        id: 2,
-        name: "GK. Gọng Cấu Kim Loại",
-        price: 1600000,
-        colors: ["#008000", "#A52A2A"],
-        img: "path-to-image",
-      },
-      {
-        id: 1,
-        name: "GK. Gọng Viền Nhựa Titan",
-        price: 1600000,
-        colors: ["#d4af37", "#000000"],
-        img: "path-to-image",
-      },
-      {
-        id: 2,
-        name: "GK. Gọng Cấu Kim Loại",
-        price: 1600000,
-        colors: ["#008000", "#A52A2A"],
-        img: "path-to-image",
-      },
+      id: 3,
+      name: "GK. Gọng Nhựa Cứng",
+      price: 800000,
+      colors: ["#000000", "#FFFFFF"],
+      img: "path-to-image-3",
+    }, 
   ];
 
   const handleSort = (e) => {
@@ -75,17 +41,11 @@ const SunGlassesPage = () => {
           <ul>
             <li><input type="checkbox" /> Cam</li>
             <li><input type="checkbox" /> Đen</li>
-            <li><input type="checkbox" /> xanh lá</li>
-            <li><input type="checkbox" /> Xanh dương</li>
+            <li><input type="checkbox" /> Xanh lá</li>
             <li><input type="checkbox" /> Nâu</li>
             <li><input type="checkbox" /> Đỏ</li>
-            <li><input type="checkbox" /> Xanh</li>
             <li><input type="checkbox" /> Ghi</li>
             <li><input type="checkbox" /> Vàng</li>
-            <li><input type="checkbox" /> Hồng</li>
-            <li><input type="checkbox" /> Rêu</li>
-            <li><input type="checkbox" /> Sữa</li>
-            <li><input type="checkbox" /> Vân đá</li>
           </ul>
         </div>
 
@@ -96,7 +56,6 @@ const SunGlassesPage = () => {
             <li><input type="checkbox" /> Kim loại</li>
             <li><input type="checkbox" /> Nhựa</li>
             <li><input type="checkbox" /> Nhựa dẻo</li>
-            <li><input type="checkbox" /> Nhựa pha kim loại</li>
             <li><input type="checkbox" /> Titan</li>
           </ul>
         </div>
@@ -106,11 +65,9 @@ const SunGlassesPage = () => {
           <ul>
             <li><input type="checkbox" /> Browline</li>
             <li><input type="checkbox" /> Chữ nhật</li>
-            <li><input type="checkbox" /> Đa giác</li>
-            <li><input type="checkbox" /> Hình Oval</li>
+            <li><input type="checkbox" /> Oval</li>
             <li><input type="checkbox" /> Hình tròn</li>
             <li><input type="checkbox" /> Hình vuông</li>
-            <li><input type="checkbox" /> Mắt mèo</li>
           </ul>
         </div>
       </div>
@@ -152,4 +109,4 @@ const SunGlassesPage = () => {
   );
 };
 
-export default SunGlassesPage;
+export default GlassesFramePage;

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from "./pages/users/homePage"; 
 import { ROUTERS } from "./utils/router";
+import HomePage from 'pages/users/homePage/HomePage';
 import MasterLayout from "./pages/users/theme/masterLayout/masterLayout";
 import ProfilePage from "./pages/users/profilePage"; 
 import LoginPage from "./pages/users/loginPage/LoginPage";
@@ -19,7 +19,7 @@ import LensPage from "pages/Products/LensPage";
 import SunGlassesPage from "pages/Products/SunGlassesPage";
 import SunGlassesKidPage from "pages/Products/SunGlassesKidPage";
 import PaymentPage from 'pages/Payment/PaymentPage';
-
+import PromotionsPage from 'Promotions/PromotionsPage';
 
 const renderUserRouter = () => {
     const userRouters = [
@@ -76,7 +76,7 @@ const renderUserRouter = () => {
             component: <OrderTrackingPage />
         },
         {
-            path: ROUTERS.USER.GlASSES,
+            path: ROUTERS.USER.GLASSES,
             component: <GlassesFramePage />
         },
         {
@@ -94,6 +94,10 @@ const renderUserRouter = () => {
         {
             path: ROUTERS.USER.PAYMENT,
             component: <PaymentPage />
+        },
+        {
+            path: ROUTERS.USER.PROMOTIONS,
+            component: <PromotionsPage />
         },
     ];
 

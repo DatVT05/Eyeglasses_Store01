@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import "./PaymentPage.scss"; // SCSS file for styling
+import "./PaymentPage.scss"; 
 
 const PaymentPage = () => {
-  const [timeLeft, setTimeLeft] = useState(30 * 60); // Countdown of 30 minutes
+  const [timeLeft, setTimeLeft] = useState(30 * 60); 
 
-  // Mock order data
   const order = {
     supplier: "Kính Mắt Lily",
     partnerCode: "2332",
     orderValue: 211864,
   };
 
-  // Countdown logic (optional)
   React.useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));

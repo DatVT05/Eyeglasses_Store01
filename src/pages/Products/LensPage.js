@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./LensPage.scss";
 
 const LensPage = () => {
@@ -10,21 +11,19 @@ const LensPage = () => {
       name: "Tròng kính Chemi U2 Chiết suất 1.67",
       brand: "Chemi",
       price: "Liên hệ ngay",
-      img: "path-to-image", // Replace with actual image path
+      img: "path-to-image",
     },
     {
       id: 2,
       name: "Tròng kính Bevis Optical Chiết suất 1.56",
       brand: "Bevis",
       price: "Liên hệ ngay",
-      img: "path-to-image", // Replace with actual image path
+      img: "path-to-image", 
     },
-    // Add more products here
   ];
 
   const handleSortChange = (e) => {
     setSortBy(e.target.value);
-    // Implement sort logic based on the value of sortBy
   };
 
   return (
@@ -90,10 +89,11 @@ const LensPage = () => {
         <div className="product-grid">
           {products.map((product) => (
             <div key={product.id} className="product-card">
-              <img src={product.img} alt={product.name} />
+              <img src={product.img} alt={product.name} className="product-image" />
               <h3>{product.name}</h3>
-              <p>{product.price}</p>
-              <button className="contact-btn">Liên hệ ngay</button>
+              <Link to={`/product/${product.id}`} className="buy-btn">
+                Chi tiết sản phẩm
+              </Link>
             </div>
           ))}
         </div>

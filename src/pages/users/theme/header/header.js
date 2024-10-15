@@ -49,7 +49,7 @@ const HeaderMenuTop = () => {
           Sản phẩm
           <ul className="dropdown">
             <li>
-              <Link to="/products/glassesframe">Gọng kính cận</Link>
+              <Link to="/products/glasses">Gọng kính cận</Link>
             </li>
             <li>
               <Link to="/products/lens">Tròng kính</Link>
@@ -58,7 +58,7 @@ const HeaderMenuTop = () => {
               <Link to="/products/sunglasses">Kính râm</Link>
             </li>
             <li>
-              <Link to="/products/sunglasses_kid">Kính râm trẻ em</Link>
+              <Link to="/products/sunglasseskid">Kính râm trẻ em</Link>
             </li>
           </ul>
         </li>
@@ -77,8 +77,10 @@ const HeaderMenuTop = () => {
             </li>
           </ul>
         </li>
-        <li className="nav-item">Ưu đãi</li>
-        <li className="nav-item">Khách hàng</li>
+        <li className="nav-item">
+          <Link to="/promotions" style={{ textDecoration: "none", color: "3d3d3d" }}>Ưu đãi</Link>
+        </li>
+        <li className="nav-item">Khuyến mãi</li>
         <li className="nav-item">
           <Link to="/track-order" style={{ textDecoration: "none" }}>
             Tra cứu đơn

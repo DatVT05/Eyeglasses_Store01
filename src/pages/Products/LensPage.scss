@@ -89,6 +89,23 @@
             border-radius: 5px;
             cursor: pointer;
           }
+          .buy-btn {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none; /* Remove underline from Link */
+            transition: background-color 0.3s ease;
+          
+            &:hover {
+              background-color: #e68a00;
+            }
+          } 
         }
       }
     }

@@ -1,34 +1,28 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import "./ProductInfo.scss"; // Import the corresponding SCSS file
+import "./ProductInfo.scss"; 
 
 const ProductInfo = () => {
-    const { productId } = useParams(); // To get the product ID from the URL
-    const [selectedColor, setSelectedColor] = useState("Đen vàng");
+    const { productId } = useParams();
+    const [selectedColor, setSelectedColor] = useState("Hồng");
     const [quantity, setQuantity] = useState(1);
 
-    // Sample product data (you can replace this with API call)
     const product = {
         id: productId,
-        name: "KÍNH NHỰA LILY 87135",
-        code: "C-ND-TT-87135",
-        price: 380000,
+        name: "KÍNH KIM LOẠI LILY 86314KOR",
+        code: "C-KLT-VT-86314KOR",
+        price: 235000,
+        originalPrice: 470000,
         description: `* Thương Hiệu: LILY
-        * Mã sản phẩm: 87135
-        * Thông tin kỹ thuật số: 50-18-137
-        * Chất liệu: Nhựa Dẻo
-        * Giá sản phẩm: 380000 VND
-        * Xuất xứ: Trung Quốc
-        * CHỊU TRÁCH NHIỆM SP: CÔNG TY TNHH THƯƠNG MẠI VÀ DỊCH VỤ LILY GROUP VIỆT NAM
-        * CẢNH BÁO: BẢO QUẢN TRONG HỘP KÍNH
-        * HDSD: DÙNG ĐỂ ĐEO MẮT, TRÁNH NHIỆT ĐỘ CAO & VA CHẠM MẠNH
-        * MH: 466553`,
+        * Mã sản phẩm: C-KLT-VT-86314KOR
+        * Chất liệu: Kim loại titan
+        * Xuất xứ: Trung Quốc`,
         images: [
-            "path-to-image-1.jpg",
-            "path-to-image-2.jpg",
-            "path-to-image-3.jpg"
+            "/image/image-1.jpg",
+            "/image/image-2.jpg",
+            "/image/image-3.jpg",
         ],
-        colors: ["Đen vàng", "Nâu đậm", "Hồng Đục"]
+        colors: ["Hồng", "Trắng", "Đen", "Đen trắng"]
     };
 
     const handleColorSelect = (color) => setSelectedColor(color);
@@ -40,6 +34,7 @@ const ProductInfo = () => {
     return (
         <div className="product-info">
             <div className="product-info-container">
+                {/* Product Images */}
                 <div className="product-images">
                     <img src={product.images[0]} alt={product.name} className="main-image" />
                     <div className="thumbnail-images">
@@ -48,13 +43,20 @@ const ProductInfo = () => {
                         ))}
                     </div>
                 </div>
+
+                {/* Product Details */}
                 <div className="product-details">
                     <h1>{product.name}</h1>
                     <p className="product-code">Mã sản phẩm: {product.code}</p>
-                    <p className="product-price">{product.price.toLocaleString()} ₫</p>
+                    <p className="product-price">
+                        <span className="discount-price">{product.price.toLocaleString()} ₫</span>
+                        <span className="original-price">{product.originalPrice.toLocaleString()} ₫</span>
+                    </p>
                     <div className="product-description">
                         <p>{product.description}</p>
                     </div>
+
+                    {/* Color Options */}
                     <div className="product-options">
                         <h3>Màu sắc:</h3>
                         <div className="colors">
@@ -68,6 +70,8 @@ const ProductInfo = () => {
                                 </button>
                             ))}
                         </div>
+
+                        {/* Quantity Control */}
                         <div className="quantity-control">
                             <h3>Số lượng:</h3>
                             <button onClick={() => handleQuantityChange("decrease")}>-</button>
@@ -75,11 +79,21 @@ const ProductInfo = () => {
                             <button onClick={() => handleQuantityChange("increase")}>+</button>
                         </div>
                     </div>
+
+                    {/* Add to Cart / Buy Now */}
                     <div className="product-actions">
                         <button className="add-to-cart">THÊM VÀO GIỎ HÀNG</button>
                         <button className="buy-now">MUA NGAY</button>
                     </div>
                     <p className="exclusive-offer">ĐẶC QUYỀN MUA SẢN PHẨM TẠI LILY</p>
+                </div>
+            </div>
+
+            {/* Size Information */}
+            <div className="product-size">
+                <h2>Kiểu kính hợp gương mặt</h2>
+                <div className="size-images">
+                    <img src="/image/size.png"/>
                 </div>
             </div>
         </div>

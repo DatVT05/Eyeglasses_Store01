@@ -14,9 +14,11 @@ export const ROUTERS = {
         EXCHANGE_POLICY: "/policy/exchange",
         ORDER_TRACKING: "/track-order",
         PRODUCT_INFO: "/product/:productId",
-        GLASSES: "/products/glassesframe",
+        GLASSES: "/products/glasses",
         LENS: "/products/lens",
         SUNGLASSES: "/products/sunglasses",
         SUNGLASSESKID: "/products/sunglasseskid",
+        PAYMENT:"/payment",
+        PROMOTIONS:"/promotions"
     }
 };

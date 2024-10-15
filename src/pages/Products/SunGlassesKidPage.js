@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SunGlassesKidPage.scss";
+import { Link } from "react-router-dom"; 
 
 const SunGlassesKidPage = () => {
   const [sortBy, setSortBy] = useState("default");
@@ -128,7 +129,7 @@ const SunGlassesKidPage = () => {
         <div className="product-grid">
           {products.map((product) => (
             <div key={product.id} className="product-card">
-              <img src={product.img} alt={product.name} />
+              <img src={product.img} alt={product.name} className="product-image" />
               <h3>{product.name}</h3>
               <p>{product.price.toLocaleString()}đ</p>
               <div className="color-options">
@@ -140,7 +141,9 @@ const SunGlassesKidPage = () => {
                   ></span>
                 ))}
               </div>
-              <button className="buy-btn">Mua Ngay</button>
+              <Link to={`/product/${product.id}`} className="buy-btn">
+                Xem Chi Tiết
+              </Link>
             </div>
           ))}
         </div>
