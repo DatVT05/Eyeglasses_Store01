@@ -1,19 +1,30 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ROUTERS } from "./utils/router";
+//User
 import HomePage from 'pages/users/homePage/HomePage';
 import MasterLayout from "./pages/users/theme/masterLayout/masterLayout";
-import ProfilePage from "./pages/users/profilePage"; 
 import LoginPage from "./pages/users/loginPage/LoginPage";
-import CartPage from './pages/cart/CartPage';
-import CheckoutPage from './pages/Checkout/CheckoutPage';
+import ProfilePage from 'pages/users/profilePage/ProfilePage';
+import Comment from 'pages/Comment/CommentPage';
+//Admin
+import AdminLogin from 'pages/users/adminPage/AdminLogin';
+import AdminDashboard from 'pages/users/adminPage/AdminDashboard';
+//Cart
+import CartPage from './pages/Cart/CartPage';
+import BlankCartPage from 'pages/Cart/BlankCartPage';
+import ProductInfo from './pages/Products/ProductInfo';
+//Order
+import OrderDetails from './pages/Order/OrderDetails';
+import OrderStatus from './pages/Order/OrderStatus';
+import OrderTrackingPage from './pages/Order/OrderTrackingPage';
+//Policies
 import PaymentPolicyPage from './pages/Policies/PaymentPolicyPage';
 import ShippingPolicyPage from './pages/Policies/ShippingPolicyPage';
 import WarrantyPolicyPage from './pages/Policies/WarrantyPolicyPage';
 import ReturnPolicyPage from "./pages/Policies/ReturnPolicyPage";
 import ExchangePolicyPage from "./pages/Policies/ExchangePolicyPage";
-import ProductInfo from './pages/Products/ProductInfo';
-import OrderTrackingPage from './pages/Order/OrderTrackingPage';
 import CleaningPolicyPage from './pages/Policies/CleaningPolicyPage';
+//Products
 import GlassesFramePage from "./pages/Products/GlassesFramePage";
 import LensPage from "pages/Products/LensPage";
 import SunGlassesPage from "pages/Products/SunGlassesPage";
@@ -36,12 +47,28 @@ const renderUserRouter = () => {
             component: <LoginPage />
         },
         {
+            path: ROUTERS.USER.PROMOTIONS,
+            component: <PromotionsPage />
+        },
+        {
+            path: ROUTERS.USER.COMMENT,
+            component: <Comment />
+        },
+        {
+            path: ROUTERS.USER.ADMIN_LOGIN,
+            component: <AdminLogin />
+        },
+        {
+            path: ROUTERS.USER.ADMIN_DASHBOARD,
+            component: <AdminDashboard />
+        },
+        {
             path: ROUTERS.USER.CART,
             component: <CartPage />
         },
         {
-            path: ROUTERS.USER.CHECKOUT,
-            component: <CheckoutPage />
+            path: ROUTERS.USER.BLANKCART,
+            component: <BlankCartPage />
         },
         {
             path: ROUTERS.USER.CLEAN_POLICY,
@@ -72,6 +99,14 @@ const renderUserRouter = () => {
             component: <ProductInfo />
         },
         {
+            path: ROUTERS.USER.ORDER_DETAIL,
+            component: <OrderDetails />
+        },
+        {
+            path: ROUTERS.USER.ORDER_STATUS,
+            component: <OrderStatus />
+        },
+        {
             path: ROUTERS.USER.ORDER_TRACKING,
             component: <OrderTrackingPage />
         },
@@ -95,10 +130,7 @@ const renderUserRouter = () => {
             path: ROUTERS.USER.PAYMENT,
             component: <PaymentPage />
         },
-        {
-            path: ROUTERS.USER.PROMOTIONS,
-            component: <PromotionsPage />
-        },
+        
     ];
 
     return (

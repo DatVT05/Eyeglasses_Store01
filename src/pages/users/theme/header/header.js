@@ -20,7 +20,7 @@ const MainHeaderTop = () => {
                   <Link to="/policy/warranty">Chính sách</Link>
                 </li>
                 <li className="rounded">
-                  <Link to="/loginpage">
+                  <Link to="/login">
                     <AiOutlineUser />
                     Tài khoản
                   </Link>
@@ -45,6 +45,12 @@ const HeaderMenuTop = () => {
   return (
     <div className="header-menu-top">
       <ul className="nav-menu">
+        <li className="nav-item">
+          <Link
+            to="/homepage"
+            style={{ textDecoration: "none", color: "3d3d3d" }}
+          ><span>KING'S</span></Link>
+        </li>
         <li className="nav-item">
           Sản phẩm
           <ul className="dropdown">
@@ -78,11 +84,23 @@ const HeaderMenuTop = () => {
           </ul>
         </li>
         <li className="nav-item">
-          <Link to="/promotions" style={{ textDecoration: "none", color: "3d3d3d" }}>Ưu đãi</Link>
+          <Link
+            to="/promotions"
+            style={{ textDecoration: "none", color: "3d3d3d" }}
+          >
+            Ưu đãi
+          </Link>
         </li>
-        <li className="nav-item">Khuyến mãi</li>
         <li className="nav-item">
-          <Link to="/track-order" style={{ textDecoration: "none" }}>
+          <Link
+            to="/comment"
+            style={{ textDecoration: "none", color: "3d3d3d" }}
+          >
+            Đánh giá
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/order/track_order" style={{ textDecoration: "none" }}>
             Tra cứu đơn
           </Link>
         </li>
@@ -101,7 +119,7 @@ const HeaderMenuTop = () => {
           )}
         </div>
         <div className="cart-icon">
-          <Link to="/cart/cartpage">
+          <Link to="/cart/blankcart">
             <FontAwesomeIcon icon={faShoppingCart} />
           </Link>
           <span className="cart-badge">{cartItems}</span>

@@ -71,6 +71,24 @@ const GlassesFramePage = () => {
             <li><input type="checkbox" /> Hình vuông</li>
           </ul>
         </div>
+        
+        <div className="filter">
+          <h3>Tính năng</h3>
+          <ul>
+            <li>
+              <input type="checkbox" /> Đổi màu
+            </li>
+            <li>
+              <input type="checkbox" /> Lọc ánh sáng xanh
+            </li>
+            <li>
+              <input type="checkbox" /> Râm cận
+            </li>
+            <li>
+              <input type="checkbox" /> Siêu mỏng
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div className="product-section">
