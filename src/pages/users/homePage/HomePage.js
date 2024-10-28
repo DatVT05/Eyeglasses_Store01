@@ -1,33 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SwiperComponent from "./component/swiper";
 import "./HomePage.scss";
 
 const HomePage = () => {
   const bestSellers = [
-    {
-      id: 1,
-      name: "GK. Gọng Nhựa ANB221303",
-      price: 350000,
-      img: "/path/to/image1.jpg",
-    },
-    {
-      id: 2,
-      name: "GK. Gọng Nhựa Cứng AN0845",
-      price: 800000,
-      img: "/path/to/image2.jpg",
-    },
-    {
-      id: 3,
-      name: "GK. Gọng Cốt Kim Loại AN226817",
-      price: 550000,
-      img: "/path/to/image3.jpg",
-    },
-    {
-      id: 4,
-      name: "GK. Gọng Kim Loại AN221434",
-      price: 400000,
-      img: "/path/to/image4.jpg",
-    },
+    <SwiperComponent key="swiper" /> 
   ];
 
   const newestCollection = [
@@ -62,14 +40,9 @@ const HomePage = () => {
       <section className="best-sellers">
         <h2>BÁN CHẠY NHẤT</h2>
         <div className="products-row">
-          {bestSellers.map((product) => (
-            <div key={product.id} className="product-card">
-              <img src={product.img} alt={product.name} />
-              <h3>{product.name}</h3>
-              <p>{product.price.toLocaleString()}₫</p>
-              <Link to={`/product/${product.id}`} className="buy-btn">
-                Xem thêm
-              </Link>
+          {bestSellers.map((product, index) => (
+            <div key={index} className="product-card">
+              {product}
             </div>
           ))}
         </div>
