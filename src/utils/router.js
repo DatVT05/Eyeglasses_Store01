@@ -1,7 +1,7 @@
 export const ROUTERS = {
     USER: {
         HOME: "/homepage",
-        LOGIN:"/login",
+        LOGIN:"/loginpage",
         PROFILE: "/profile",
         ADMIN_LOGIN:"/admin/login" ,
         ADMIN_DASHBOARD:"" ,

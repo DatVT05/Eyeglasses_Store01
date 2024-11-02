@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SwiperComponent from "./component/swiper";
+import SwiperComponent from "../../../component/swiper/swiper";
 import "./HomePage.scss";
 
 const HomePage = () => {

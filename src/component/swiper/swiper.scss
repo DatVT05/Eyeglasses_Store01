@@ -1,0 +1,125 @@
+.best-seller-list {
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
+  
+  .swiper {
+    padding: 0 2rem;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .best-seller-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-10px); 
+    }
+  
+    .product-image {
+      width: 100%;
+      max-height: 160px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+    }
+  
+    .product-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+  
+    .product-price {
+      font-size: 1.1rem;
+      color: #6c757d; 
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+  
+    .buy-btn {
+      background-color: #6c757d; 
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+  
+      &:hover {
+        background-color: #5a6268; 
+      }
+  
+      &::after {
+        content: '→'; 
+        font-size: 1rem;
+        margin-left: 5px;
+      }
+    }
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: #6c757d; 
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    &:hover {
+      background-color: #5a6268; 
+    }
+  
+    &::after {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .swiper-button-prev {
+    left: -20px;
+  }
+  
+  .swiper-button-next {
+    right: -20px;
+  }
+  
+  .swiper-pagination {
+    bottom: -10px;
+    .swiper-pagination-bullet {
+      background-color: #6c757d; 
+      opacity: 0.5;
+  
+      &-active {
+        opacity: 1;
+      }
+    }
+  }
+  
