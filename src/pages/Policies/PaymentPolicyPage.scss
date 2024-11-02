@@ -1,38 +1,83 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
 .payment-policy-page {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff; // White background for better readability
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff; // White background for better readability
 
-    .policy-content {
-        text-align: left;
+  .policy-content {
+    text-align: left;
 
-        h1 {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-
-            li {
-                font-size: 18px;
-                color: #555;
-                margin-bottom: 10px;
-                line-height: 1.6;
-                padding-left: 20px;
-                position: relative;
-
-                &:before {
-                    content: "–";
-                    position: absolute;
-                    left: 0;
-                    color: #555;
-                }
-            }
-        }
+    h1 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: bold;
     }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 10px;
+        line-height: 1.6;
+        padding-left: 20px;
+        position: relative;
+
+        &:before {
+          content: "–";
+          position: absolute;
+          left: 0;
+          color: #555;
+        }
+      }
+    }
+  }
+}
+.feature {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 20px;
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f8f8f8;
+    color: #333;
+    width: 150px;
+    padding: 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 1px solid #e0e0e0;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: #e0f7fa;
+      transform: scale(1.05);
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      color: #4dc2c2;
+    }
+
+    span {
+      color: #333;
+    }
+  }
 }

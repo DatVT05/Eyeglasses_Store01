@@ -1,9 +1,10 @@
 import React from "react";
 import "./PaymentPolicyPage.scss"; 
-
+import { Link } from "react-router-dom";
 const PaymentPolicyPage = () => {
     return (
-        <div className="payment-policy-page">
+        <div className="container">
+<div className="payment-policy-page">
             <div className="policy-content">
                 <h1>Chính sách thanh toán</h1>
                 <ul>
@@ -13,6 +14,27 @@ const PaymentPolicyPage = () => {
                 </ul>
             </div>
         </div>
+        <div className="feature">
+        <Link to="/policy/warranty" className="feature-item">
+          <span className="icon">💠</span>
+          <span>Bảo hành trọn đời</span>
+        </Link>
+        <Link to="/do-mat-mien-phi" className="feature-item">
+          <span className="icon">🌱</span>
+          <span>Đo mắt miễn phí</span>
+        </Link>
+        <Link to="/policy/exchange" className="feature-item">
+          <span className="icon">♻️</span>
+          <span>Thu cũ đổi mới</span>
+        </Link>
+        <Link to="/policy/cleaning" className="feature-item">
+          <span className="icon">🧼</span>
+          <span>Vệ sinh và bảo quản kính</span>
+        </Link>
+      </div>
+        </div>
+
+        
     );
 };
 

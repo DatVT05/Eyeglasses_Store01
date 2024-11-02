@@ -1,37 +1,83 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
 .exchange-policy-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  
-    h1, h2 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+
+  h1,
+  h2 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    color: #555;
+  }
+
+  ul,
+  ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  li {
+    margin-bottom: 10px;
+    color: #555;
+  }
+}
+.feature {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 20px;
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f8f8f8;
+    color: #333;
+    width: 150px;
+    padding: 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 1px solid #e0e0e0;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: #e0f7fa;
+      transform: scale(1.05);
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      color: #4dc2c2;
+    }
+
+    span {
       color: #333;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-  
-    p {
-      margin-bottom: 20px;
-      color: #555;
-    }
-  
-    ul, ol {
-      margin-left: 20px;
-      margin-bottom: 20px;
-    }
-  
-    ul {
-      list-style-type: disc;
-    }
-  
-    ol {
-      list-style-type: decimal;
-    }
-  
-    li {
-      margin-bottom: 10px;
-      color: #555;
     }
   }
-  
+}

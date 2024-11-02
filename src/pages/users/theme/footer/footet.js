@@ -2,30 +2,11 @@ import React from "react";
 import "./footer.scss";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
-//import { ROUTERS } from "./src/utils/router";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer-top">
-          <Link to="/policy/warranty" className="feature-item">
-            <span className="icon">💠</span>
-            <span>Bảo hành trọn đời</span>
-          </Link>
-          <Link to="/do-mat-mien-phi" className="feature-item">
-            <span className="icon">🌱</span>
-            <span>Đo mắt miễn phí</span>
-          </Link>
-          <Link to="/policy/exchange" className="feature-item">
-            <span className="icon">♻️</span>
-            <span>Thu cũ đổi mới</span>
-          </Link>
-          <Link to="/policy/cleaning" className="feature-item">
-            <span className="icon">🧼</span>
-            <span>Vệ sinh và bảo quản kính</span>
-          </Link>
-        </div>
         <div className="footer-content">
           <div className="footer-logo">
             <h2>King's</h2>
