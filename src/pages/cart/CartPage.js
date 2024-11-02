@@ -62,7 +62,6 @@ const CartPage = () => {
               <label>Quận / Huyện *</label>
               <select required>
                 <option value="">Select...</option>
-                <option value="">Select...</option>
                 <option value="Quận Đống Đa">Quận Đống Đa</option>
                 <option value="Huyện Thường Tín">Huyện Thường Tín</option>
                 <option value="Huyện Thanh Xuân">Huyện Thanh Xuân</option>
@@ -73,7 +72,6 @@ const CartPage = () => {
             <div className="form-group">
               <label>Phường / Xã *</label>
               <select required>
-                <option value="">Select...</option>
                 <option value="">Select...</option>
                 <option value="Phường Văn Miếu">Phường Văn Miếu</option>
                 <option value="Phường Văn Chương">Phường Văn Chương</option>
@@ -139,15 +137,6 @@ const CartPage = () => {
                 onChange={handlePaymentChange}
               />{" "}
               Thanh toán bằng thẻ ATM nội địa / Internet Banking
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="payment"
-                value="creditCard"
-                onChange={handlePaymentChange}
-              />{" "}
-              Thanh toán bằng thẻ quốc tế Visa/ Master/ JCP
             </label>
           </div>
 
