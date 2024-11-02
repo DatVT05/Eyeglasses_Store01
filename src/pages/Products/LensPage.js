@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Card from "component/card/card";
 import "./LensPage.scss";
 
 const LensPage = () => {
@@ -88,13 +89,15 @@ const LensPage = () => {
 
         <div className="product-grid">
           {products.map((product) => (
-            <div key={product.id} className="product-card">
-              <img src={product.img} alt={product.name} className="product-image" />
-              <h3>{product.name}</h3>
-              <Link to={`/product/${product.id}`} className="buy-btn">
-                Chi tiết sản phẩm
-              </Link>
-            </div>
+            <Card
+              key={product.id}
+              image={product.img}
+              title={product.name}
+              price={product.price}
+              colors={product.colors}
+              features={["Feature 1", "Feature 2"]} 
+              code={product.id.toString()} 
+            />
           ))}
         </div>
       </div>

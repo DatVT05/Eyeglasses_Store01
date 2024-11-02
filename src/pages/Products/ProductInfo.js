@@ -80,7 +80,6 @@ const ProductInfo = () => {
                         </div>
                     </div>
 
-                    {/* Add to Cart / Buy Now */}
                     <div className="product-actions">
                         <button className="add-to-cart">THÊM VÀO GIỎ HÀNG</button>
                         <button className="buy-now">MUA NGAY</button>

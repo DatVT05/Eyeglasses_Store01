@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
+import Card from "component/card/card";
 import "./GlassesFramePage.scss";
 
 const GlassesFramePage = () => {
@@ -27,7 +28,6 @@ const GlassesFramePage = () => {
       colors: ["#000000", "#FFFFFF"],
       img: "path-to-image-3",
     },
-    // Add more product entries as needed
   ];
 
   const handleSort = (e) => {
@@ -104,23 +104,15 @@ const GlassesFramePage = () => {
 
         <div className="product-grid">
           {products.map((product) => (
-            <div key={product.id} className="product-card">
-              <img src={product.img} alt={product.name} className="product-image" />
-              <h3>{product.name}</h3>
-              <p>{product.price.toLocaleString()}đ</p>
-              <div className="color-options">
-                {product.colors.map((color, index) => (
-                  <span
-                    key={index}
-                    style={{ backgroundColor: color }}
-                    className="color-dot"
-                  ></span>
-                ))}
-              </div>
-              <Link to={`/product/${product.id}`} className="buy-btn">
-                Xem Chi Tiết
-              </Link>
-            </div>
+            <Card
+              key={product.id}
+              image={product.img}
+              title={product.name}
+              price={product.price}
+              colors={product.colors}
+              features={["Feature 1", "Feature 2"]} 
+              code={product.id.toString()} 
+            />
           ))}
         </div>
       </div>

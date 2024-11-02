@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Card from "component/card/card";
 import SwiperComponent from "../../../component/swiper/swiper";
 import "./HomePage.scss";
 
@@ -59,15 +60,15 @@ const HomePage = () => {
           <Link to="#">Kính áp tròng</Link>
         </div>
         <div className="products-row">
-          {newestCollection.map((product) => (
-            <div key={product.id} className="product-card">
-              <img src={product.img} alt={product.name} />
-              <h3>{product.name}</h3>
-              <p>{product.price.toLocaleString()}₫</p>
-              <Link to={`/product/${product.id}`} className="buy-btn">
-                Xem thêm
-              </Link>
-            </div>
+          {newestCollection.map((item) => (
+            <Card
+            image={item.imgSrc || "default-image.jpg"} 
+            title={item.name || "Unknown Product"}
+            price={item.price || 0}
+            colors={item.colors || []} 
+            features={item.features || []} 
+            code={item.code || ""}
+          />
           ))}
         </div>
 
