@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './card.scss';
 
-const Card = ({ image, title, price, colors, features = [], code }) => { 
+const Card = ({ image, title, price, colors, features = [], code, productId }) => {
   return (
-    <div className="card">
+    <Link to={`/product/${productId}`} className="card">
       <div className="card-image">
         <img src={image} alt={title} />
         
@@ -33,7 +34,7 @@ const Card = ({ image, title, price, colors, features = [], code }) => {
           ))}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
