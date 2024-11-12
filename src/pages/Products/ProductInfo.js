@@ -34,7 +34,6 @@ const ProductInfo = () => {
     return (
         <div className="product-info">
             <div className="product-info-container">
-                {/* Product Images */}
                 <div className="product-images">
                     <img src={product.images[0]} alt={product.name} className="main-image" />
                     <div className="thumbnail-images">
@@ -44,7 +43,6 @@ const ProductInfo = () => {
                     </div>
                 </div>
 
-                {/* Product Details */}
                 <div className="product-details">
                     <h1>{product.name}</h1>
                     <p className="product-code">Mã sản phẩm: {product.code}</p>
@@ -56,7 +54,6 @@ const ProductInfo = () => {
                         <p>{product.description}</p>
                     </div>
 
-                    {/* Color Options */}
                     <div className="product-options">
                         <h3>Màu sắc:</h3>
                         <div className="colors">
@@ -71,7 +68,6 @@ const ProductInfo = () => {
                             ))}
                         </div>
 
-                        {/* Quantity Control */}
                         <div className="quantity-control">
                             <h3>Số lượng:</h3>
                             <button onClick={() => handleQuantityChange("decrease")}>-</button>

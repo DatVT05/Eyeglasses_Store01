@@ -6,7 +6,6 @@ export const ROUTERS = {
         ADMIN_LOGIN:"/admin/login" ,
         ADMIN_DASHBOARD:"" ,
         CART: "/cart/cartpage",
-        BLANKCART: "/cart/blankcart",
         CLEAN_POLICY: "/policy/cleaning",
         RETURN_POLICY: "/policy/return",
         SHIPPING_POLICY: "/policy/shipping",

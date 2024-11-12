@@ -40,38 +40,72 @@ const GlassesFramePage = () => {
         <div className="filter">
           <h3>Màu sắc</h3>
           <ul>
-            <li><input type="checkbox" /> Cam</li>
-            <li><input type="checkbox" /> Đen</li>
-            <li><input type="checkbox" /> Xanh lá</li>
-            <li><input type="checkbox" /> Nâu</li>
-            <li><input type="checkbox" /> Đỏ</li>
-            <li><input type="checkbox" /> Ghi</li>
-            <li><input type="checkbox" /> Vàng</li>
+            <li>
+              <input type="checkbox" /> Cam
+            </li>
+            <li>
+              <input type="checkbox" /> Đen
+            </li>
+            <li>
+              <input type="checkbox" /> Xanh lá
+            </li>
+            <li>
+              <input type="checkbox" /> Nâu
+            </li>
+            <li>
+              <input type="checkbox" /> Đỏ
+            </li>
+            <li>
+              <input type="checkbox" /> Ghi
+            </li>
+            <li>
+              <input type="checkbox" /> Vàng
+            </li>
           </ul>
         </div>
 
         <div className="filter">
           <h3>Chất liệu</h3>
           <ul>
-            <li><input type="checkbox" /> Acetate</li>
-            <li><input type="checkbox" /> Kim loại</li>
-            <li><input type="checkbox" /> Nhựa</li>
-            <li><input type="checkbox" /> Nhựa dẻo</li>
-            <li><input type="checkbox" /> Titan</li>
+            <li>
+              <input type="checkbox" /> Acetate
+            </li>
+            <li>
+              <input type="checkbox" /> Kim loại
+            </li>
+            <li>
+              <input type="checkbox" /> Nhựa
+            </li>
+            <li>
+              <input type="checkbox" /> Nhựa dẻo
+            </li>
+            <li>
+              <input type="checkbox" /> Titan
+            </li>
           </ul>
         </div>
 
         <div className="filter">
           <h3>Hình dáng</h3>
           <ul>
-            <li><input type="checkbox" /> Browline</li>
-            <li><input type="checkbox" /> Chữ nhật</li>
-            <li><input type="checkbox" /> Oval</li>
-            <li><input type="checkbox" /> Hình tròn</li>
-            <li><input type="checkbox" /> Hình vuông</li>
+            <li>
+              <input type="checkbox" /> Browline
+            </li>
+            <li>
+              <input type="checkbox" /> Chữ nhật
+            </li>
+            <li>
+              <input type="checkbox" /> Oval
+            </li>
+            <li>
+              <input type="checkbox" /> Hình tròn
+            </li>
+            <li>
+              <input type="checkbox" /> Hình vuông
+            </li>
           </ul>
         </div>
-        
+
         <div className="filter">
           <h3>Tính năng</h3>
           <ul>
@@ -109,9 +143,9 @@ const GlassesFramePage = () => {
               image={product.img}
               title={product.name}
               price={product.price}
-              colors={product.colors}
-              features={["Feature 1", "Feature 2"]} 
-              code={product.id.toString()} 
+              colors={product.colors || []}
+              features={product.features || []}
+              code={product.id.toString()}
             />
           ))}
         </div>

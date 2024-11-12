@@ -90,14 +90,14 @@ const LensPage = () => {
         <div className="product-grid">
           {products.map((product) => (
             <Card
-              key={product.id}
-              image={product.img}
-              title={product.name}
-              price={product.price}
-              colors={product.colors}
-              features={["Feature 1", "Feature 2"]} 
-              code={product.id.toString()} 
-            />
+            key={product.id}
+            image={product.img}
+            title={product.name}
+            price={product.price}
+            colors={product.colors || []} 
+            features={product.features || []} 
+            code={product.id.toString()}
+          />
           ))}
         </div>
       </div>

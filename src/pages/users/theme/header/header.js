@@ -99,7 +99,7 @@ const Header = () => {
             )}
           </div>
           <div className="cart-icon">
-            <FontAwesomeIcon icon={faShoppingCart} />
+            <Link to='/cart/cartpage'><FontAwesomeIcon icon={faShoppingCart} /></Link>
             <span className="cart-badge">{cartItems}</span>
           </div>
         </div>

@@ -11,7 +11,6 @@ import AdminLogin from 'pages/users/adminPage/AdminLogin';
 import AdminDashboard from 'pages/users/adminPage/AdminDashboard';
 //Cart
 import CartPage from './pages/Cart/CartPage';
-import BlankCartPage from 'pages/Cart/BlankCartPage';
 import ProductInfo from './pages/Products/ProductInfo';
 //Order
 import OrderDetails from './pages/Order/OrderDetails';
@@ -65,10 +64,6 @@ const renderUserRouter = () => {
         {
             path: ROUTERS.USER.CART,
             component: <CartPage />
-        },
-        {
-            path: ROUTERS.USER.BLANKCART,
-            component: <BlankCartPage />
         },
         {
             path: ROUTERS.USER.CLEAN_POLICY,

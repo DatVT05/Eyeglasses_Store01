@@ -1,27 +1,48 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import OrderItem from "component/card/OrderItem";
 import "./CartPage.scss";
 
-const CartPage = () => {
-  const [quantity, setQuantity] = useState(1);
-  const [paymentMethod, setPaymentMethod] = useState("");
+const Cart = () => {
   const navigate = useNavigate();
 
-  const handleQuantityChange = (e) => {
-    const value = Math.max(1, e.target.value);
-    setQuantity(value);
+  const [cartItems, setCartItems] = useState([]);
+  const [paymentMethod, setPaymentMethod] = useState("");
+  const [promoCode, setPromoCode] = useState("");
+  const [discount, setDiscount] = useState(0);
+  const shippingFee = 30000;
+
+  const subtotal = cartItems.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+  const total = subtotal - subtotal * discount + shippingFee;
+
+  const handleQuantityChange = (id, quantity) => {
+    setCartItems((prevItems) =>
+      prevItems.map((item) => (item.id === id ? { ...item, quantity } : item))
+    );
   };
 
-  const handlePaymentChange = (e) => {
-    setPaymentMethod(e.target.value);
+  const handleRemove = (id) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+
+  const handleApplyPromo = () => {
+    if (promoCode === "DISCOUNT10") {
+      setDiscount(0.1);
+    } else {
+      setDiscount(0);
+      alert("Mã khuyến mãi không hợp lệ");
+    }
   };
 
   const handleCheckout = () => {
-    if (paymentMethod === "atm" || paymentMethod === "creditCard") {
-      navigate("/payment");
-    } else {
-      alert("Thanh toán trực tiếp khi nhận hàng sẽ được xử lý!");
+    if (!paymentMethod) {
+      alert("Vui lòng chọn phương thức thanh toán");
+      return;
     }
+    navigate("/checkout");
   };
 
   return (
@@ -52,32 +73,23 @@ const CartPage = () => {
                 <option value="">Select...</option>
                 <option value="Hà Nội">Hà Nội</option>
                 <option value="Hồ Chí Minh">Hồ Chí Minh</option>
-                <option value="Phường">Phường</option>
-                <option value="Bắc Cạn">Bắc Cạn</option>
-                <option value="Hà Giang">Hà Giang</option>
-                <option value="Nam Định">Nam Định</option>
               </select>
             </div>
             <div className="form-group">
               <label>Quận / Huyện *</label>
               <select required>
                 <option value="">Select...</option>
-                <option value="Quận Đống Đa">Quận Đống Đa</option>
-                <option value="Huyện Thường Tín">Huyện Thường Tín</option>
-                <option value="Huyện Thanh Xuân">Huyện Thanh Xuân</option>
-                <option value="Quận Hoàn Kiếm">Quận Hoàn Kiếm</option>
-                <option value="Huyện Tây Hồ">Huyện Tây Hồ</option>
+                <option value="Quận 1">Quận 1</option>
+                <option value="Quận 2">Quận 2</option>
+                <option value="Quận 3">Quận 3</option>
               </select>
             </div>
             <div className="form-group">
               <label>Phường / Xã *</label>
               <select required>
                 <option value="">Select...</option>
-                <option value="Phường Văn Miếu">Phường Văn Miếu</option>
-                <option value="Phường Văn Chương">Phường Văn Chương</option>
-                <option value="Phường Quốc Tử Giám">Phường Quốc Tử Giám</option>
-                <option value="Phường Ô Chợ Dừa">Phường Ô Chợ Dừa</option>
-                <option value="Phường Cát Linh">Phường Cát Linh</option>
+                <option value="Phường A">Phường A</option>
+                <option value="Phường B">Phường B</option>
               </select>
             </div>
             <div className="form-group">
@@ -90,33 +102,37 @@ const CartPage = () => {
             </div>
           </form>
         </div>
-
+        
         <div className="order-summary">
           <h2>Đơn hàng</h2>
-          <div className="order-item">
-            <img src="path-to-image" alt="Product" className="product-image" />
-            <div className="product-info">
-              <h3>Kính Râm Lily KC320 - Trắng</h3>
-              <div className="quantity">
-                <input
-                  type="number"
-                  value={quantity}
-                  onChange={handleQuantityChange}
-                />
-              </div>
-              <p className="price">180.000 ₫</p>
-            </div>
-            <button className="remove-item">🗑️</button>
-          </div>
+
+          {cartItems.length > 0 ? (
+            cartItems.map((item) => (
+              <OrderItem
+                key={item.id}
+                item={item}
+                onQuantityChange={handleQuantityChange}
+                onRemove={handleRemove}
+              />
+            ))
+          ) : (
+            <p>Bạn không có sản phẩm nào.</p>
+          )}
 
           <label>Nhập mã khuyến mãi</label>
-          <input type="text" placeholder="Mã khuyến mãi" />
-          <button className="apply-code">Sử dụng</button>
+          <input
+            type="text"
+            value={promoCode}
+            onChange={(e) => setPromoCode(e.target.value)}
+            placeholder="Mã khuyến mãi"
+          />
+          <button onClick={handleApplyPromo}>Sử dụng</button>
+
           <div className="summary-details">
-            <p>Đơn hàng: 180.000 ₫</p>
-            <p>Khuyến mãi: 0 ₫</p>
-            <p>Ship: 30.000 ₫</p>
-            <p className="total">Tổng đơn: 210.000 ₫</p>
+            <p>Đơn hàng: {subtotal.toLocaleString()} ₫</p>
+            <p>Khuyến mãi: {(subtotal * discount).toLocaleString()} ₫</p>
+            <p>Ship: {shippingFee.toLocaleString()} ₫</p>
+            <p className="total">Tổng đơn: {total.toLocaleString()} ₫</p>
           </div>
 
           <div className="payment-methods">
@@ -125,7 +141,7 @@ const CartPage = () => {
                 type="radio"
                 name="payment"
                 value="cash"
-                onChange={handlePaymentChange}
+                onChange={(e) => setPaymentMethod(e.target.value)}
               />{" "}
               Thanh toán trực tiếp khi nhận hàng
             </label>
@@ -134,9 +150,18 @@ const CartPage = () => {
                 type="radio"
                 name="payment"
                 value="atm"
-                onChange={handlePaymentChange}
+                onChange={(e) => setPaymentMethod(e.target.value)}
               />{" "}
-              Thanh toán bằng thẻ ATM nội địa / Internet Banking
+              Thanh toán bằng thẻ ATM
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="payment"
+                value="creditCard"
+                onChange={(e) => setPaymentMethod(e.target.value)}
+              />{" "}
+              Thanh toán bằng thẻ quốc tế Visa/Master/JCP
             </label>
           </div>
 
@@ -149,4 +174,4 @@ const CartPage = () => {
   );
 };
 
-export default CartPage;
+export default Cart;
