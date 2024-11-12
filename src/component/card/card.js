@@ -1,13 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './card.scss';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./card.scss";
 
-const Card = ({ image, title, price, colors, features = [], code, productId }) => {
+const Card = ({
+  image,
+  title,
+  price,
+  colors,
+  features = [],
+  code,
+  productId,
+}) => {
   return (
     <Link to={`/product/${productId}`} className="card">
       <div className="card-image">
         <img src={image} alt={title} />
-        
+
         <div className="card-features">
           {features.map((feature, index) => (
             <div key={index} className="feature">
@@ -16,23 +24,11 @@ const Card = ({ image, title, price, colors, features = [], code, productId }) =
             </div>
           ))}
         </div>
-        
-        <span className="card-code">{code}</span>
       </div>
 
       <div className="card-info">
         <h3 className="card-title">{title}</h3>
         <p className="card-price">{price.toLocaleString()} ₫</p>
-        
-        <div className="color-options">
-          {colors.map((color, index) => (
-            <span
-              key={index}
-              className="color-dot"
-              style={{ backgroundColor: color }}
-            ></span>
-          ))}
-        </div>
       </div>
     </Link>
   );
