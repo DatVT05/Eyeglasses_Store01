@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./LoginPage.scss";
 import { FaGoogle } from "react-icons/fa";
+import "./LoginPage.scss";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -10,12 +10,12 @@ const LoginPage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Handle login logic here
     console.log("Logging in with:", { username, password, rememberMe });
   };
 
   return (
     <div className="login-page">
+      <div className="container">
       <div className="login-container">
         <h2>Đăng nhập</h2>
         <p>Hãy đăng nhập để được hưởng đặc quyền riêng dành cho bạn</p>
@@ -65,10 +65,30 @@ const LoginPage = () => {
           </div>
         </form>
         <div className="register-link">
-          <p>Bạn chưa có tài khoản?</p>
+          <p>Bạn chưa có tài khoản Anna?</p>
           <Link to="/register">Đăng ký ngay</Link>
         </div>
       </div>
+      <div className="feature">
+        <Link to="/policy/warranty" className="feature-item">
+          <span className="icon">💠</span>
+          <span>Bảo hành trọn đời</span>
+        </Link>
+        <Link to="/do-mat-mien-phi" className="feature-item">
+          <span className="icon">🌱</span>
+          <span>Đo mắt miễn phí</span>
+        </Link>
+        <Link to="/policy/exchange" className="feature-item">
+          <span className="icon">♻️</span>
+          <span>Thu cũ đổi mới</span>
+        </Link>
+        <Link to="/policy/cleaning" className="feature-item">
+          <span className="icon">🧼</span>
+          <span>Vệ sinh và bảo quản kính</span>
+        </Link>
+      </div>
+      </div> 
+      
     </div>
   );
 };

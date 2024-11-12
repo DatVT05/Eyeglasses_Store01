@@ -43,7 +43,7 @@ const renderUserRouter = () => {
             component: <ProfilePage />
         },
         {
-            path: ROUTERS.USER.LOGIN,
+            path: ROUTERS.USER.LOGIN ,
             component: <LoginPage />
         },
         {

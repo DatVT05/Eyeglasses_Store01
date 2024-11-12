@@ -20,7 +20,7 @@ const Header = () => {
           <div className="row align-items-center">
             <div className="col-xs-12 col-md-8 text-left">
               <p className="font-weight-bold">
-                <Link to="">KING'S EYEGLASSES</Link>
+                <Link to="/homepage">KING'S EYEGLASSES</Link>
               </p>
             </div>
             <div className="col-xs-12 col-md-4 text-right">

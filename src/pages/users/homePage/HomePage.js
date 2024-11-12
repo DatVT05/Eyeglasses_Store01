@@ -1,13 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "component/card/card";
 import SwiperComponent from "../../../component/swiper/swiper";
 import "./HomePage.scss";
 
 const HomePage = () => {
-  const bestSellers = [
-    <SwiperComponent key="swiper" /> 
-  ];
 
   const newestCollection = [
     {
@@ -36,41 +33,42 @@ const HomePage = () => {
     },
   ];
 
+  const [tab, setTab] = useState(0);
+
+  const handleTabChange = (index) => {
+    setTab(index)
+  }
+
+  const tabs = [
+    { label: 'Gọng kính', content: 'Các sản phẩm Gọng kính' },
+    { label: 'Tròng kính', content: 'Các sản phẩm Tròng kính' },
+    { label: 'Kính râm', content: 'Các sản phẩm Kính râm' },
+    { label: 'Kính áp tròng', content: 'Các sản phẩm Kính áp tròng' },
+  ]
+
   return (
     <div className="home-page">
       <section className="best-sellers">
         <h2>BÁN CHẠY NHẤT</h2>
-        <div className="products-row">
-          {bestSellers.map((product, index) => (
-            <div key={index} className="product-card">
-              {product}
-            </div>
-          ))}
-        </div>
+        <SwiperComponent/> 
       </section>
 
       <section className="new-collection">
         <h2>BỘ SƯU TẬP MỚI NHẤT</h2>
-        <div className="tabs">
-          <Link to="#" className="active">
-            Gọng kính
-          </Link>
-          <Link to="#">Tròng kính</Link>
-          <Link to="#">Kính râm</Link>
-          <Link to="#">Kính áp tròng</Link>
-        </div>
-        <div className="products-row">
-          {newestCollection.map((item) => (
-            <Card
-            image={item.imgSrc || "default-image.jpg"} 
-            title={item.name || "Unknown Product"}
-            price={item.price || 0}
-            colors={item.colors || []} 
-            features={item.features || []} 
-            code={item.code || ""}
-          />
-          ))}
-        </div>
+          <div className="tabs">
+            {tabs.map((tabItem, index) => (
+              <div
+                key={index}
+                onClick={() => handleTabChange(index)}
+              >
+                {tabItem.label}
+              </div>
+            ))}
+          </div>
+
+          <div>
+            {tabs[tab].content}
+          </div>
 
         <Link to="/products/glasses" className="see-more-btn">
           XEM THÊM GỌNG KÍNH
