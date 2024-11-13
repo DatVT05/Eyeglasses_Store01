@@ -80,7 +80,7 @@ const Header = () => {
             <Link to="/comment">Khách hàng</Link>
           </li>
           <li className="nav-item">
-            <Link to="/track-order" style={{ textDecoration: "none" }}>
+            <Link to="/order/track_order" style={{ textDecoration: "none" }}>
               Tra cứu đơn
             </Link>
           </li>

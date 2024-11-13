@@ -22,7 +22,9 @@
     .footer-logo {
       flex: 1;
       text-align: left;
-
+      h2, p{
+        color: #333;
+      }
       .logo-img {
         width: 100px;
         margin-bottom: 15px;

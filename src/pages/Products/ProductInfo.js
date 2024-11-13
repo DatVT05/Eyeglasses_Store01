@@ -71,7 +71,7 @@ const ProductInfo = () => {
           </div>
 
           <button className="special-privilege" onClick={handleModalToggle}>
-            ĐẶC QUYỀN MUA SẢN PHẨM TẠI LILY
+            ĐẶC QUYỀN MUA SẢN PHẨM TẠI KING'S
           </button>
         </div>
       </div>
@@ -79,7 +79,7 @@ const ProductInfo = () => {
       {isModalOpen && (
         <div className="modal-overlay" onClick={handleModalToggle}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h2>ĐẶC QUYỀN KHI MUA SẢN PHẨM TẠI LILY</h2>
+            <h2>ĐẶC QUYỀN KHI MUA SẢN PHẨM TẠI KING'S</h2>
             <ul>
               <li>Miễn phí đổi mới 3 tháng - nếu có lỗi từ NSX</li>
               <li>1 lần thay đổi độ kính miễn phí trong vòng 1 tháng</li>

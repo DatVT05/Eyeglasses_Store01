@@ -9,7 +9,6 @@ const OrderTrackingPage = () => {
 
   const handleOrderTracking = (e) => {
     e.preventDefault();
-    // Handle the order tracking logic
   };
 
   return (
@@ -43,7 +42,6 @@ const OrderTrackingPage = () => {
       {error && <p className="error">{error}</p>}
       {orderDetails && (
         <div className="order-details">
-          {/* Render order details here */}
         </div>
       )}
     </div>

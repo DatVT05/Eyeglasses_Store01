@@ -31,7 +31,7 @@ const OrderStatus = () => {
             <p><strong>Ngày đặt: </strong>{orderDetails.date}</p>
             <p><strong>Tên người liên hệ: </strong>{orderDetails.contactPerson}</p>
             <p><strong>Số điện thoại: </strong>{orderDetails.phone}</p>
-            <p><strong>Ghi chú: </strong>Không có</p> {/* Giả sử không có ghi chú */}
+            <p><strong>Ghi chú: </strong>Không có</p>
           </div>
           <div>
             <p><strong>Khách hàng: </strong>{orderDetails.customer}</p>
