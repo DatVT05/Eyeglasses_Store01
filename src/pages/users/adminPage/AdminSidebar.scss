@@ -1,0 +1,60 @@
+.admin-sidebar {
+    width: 250px;
+    background-color: #2d3a45; // Dark background for sidebar
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+  
+    h2 {
+      font-size: 14px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        margin: 5px 0;
+        padding: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &.active {
+          font-weight: bold;
+          background-color: #1c2b36;
+        }
+  
+        &:hover {
+          background-color: #1c2b36;
+        }
+  
+        .sub-menu {
+          padding-left: 15px;
+          margin-top: 5px;
+  
+          li {
+            font-size: 13px;
+            color: #b0b0b0;
+            padding: 5px;
+            border-radius: 4px;
+  
+            &:hover {
+              color: #fff;
+              background-color: #1c2b36;
+            }
+  
+            &.selected {
+              font-weight: bold;
+              color: #ffa726; // Highlighted color for selected menu item
+            }
+          }
+        }
+      }
+    }
+  }
+  

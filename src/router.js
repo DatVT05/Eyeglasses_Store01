@@ -8,7 +8,7 @@ import ProfilePage from 'pages/users/profilePage/ProfilePage';
 import Comment from 'pages/Comment/CommentPage';
 //Admin
 import AdminLogin from 'pages/users/adminPage/AdminLogin';
-import AdminDashboard from 'pages/users/adminPage/AdminDashboard';
+import AdminProductPage from 'pages/users/adminPage/AdminProductPage';
 //Cart
 import CartPage from './pages/Cart/CartPage';
 import ProductInfo from './pages/Products/ProductInfo';
@@ -58,8 +58,8 @@ const renderUserRouter = () => {
             component: <AdminLogin />
         },
         {
-            path: ROUTERS.USER.ADMIN_DASHBOARD,
-            component: <AdminDashboard />
+            path: ROUTERS.USER.ADMIN_PRODUCT_PAGE,
+            component: <AdminProductPage />
         },
         {
             path: ROUTERS.USER.CART,

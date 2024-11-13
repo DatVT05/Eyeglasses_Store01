@@ -1,46 +1,63 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
-import './AdminLogin.scss';
+import React, { useState } from "react";
+import "./AdminLogin.scss";
 
 const AdminLogin = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-    const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-    const handleLogin = (e) => {
-        e.preventDefault();
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // Add login functionality here (e.g., API call)
+    console.log("Email:", email);
+    console.log("Password:", password);
+  };
 
-        if (username === 'admin' && password === 'admin123') {
-            navigate('/admin/dashboard');
-        } else {
-            setError('Tên đăng nhập hoặc mật khẩu không chính xác!');
-        }
-    };
+  return (
+    <div className="admin-login">
+      <div className="login-container">
+        <h1>LOGIN AS ADMIN</h1>
+        <form onSubmit={handleLogin}>
+          <label htmlFor="email">EMAIL</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
 
-    return (
-        <div className="login-container">
-            <form className="login-form" onSubmit={handleLogin}>
-                <h2>Đăng Nhập Admin</h2>
-                {error && <p className="error">{error}</p>}
-                <input
-                    type="text"
-                    placeholder="Tên đăng nhập"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    required
-                />
-                <input
-                    type="password"
-                    placeholder="Mật khẩu"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                <button type="submit">Đăng nhập</button>
-            </form>
-        </div>
-    );
+          <label htmlFor="password">PASSWORD</label>
+          <div className="password-input">
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button
+              type="button"
+              className="show-password"
+              onClick={() =>
+                document.getElementById("password").type === "password"
+                  ? (document.getElementById("password").type = "text")
+                  : (document.getElementById("password").type = "password")
+              }
+            >
+              👁️
+            </button>
+          </div>
+
+          <button type="submit" className="login-button">
+            Login
+          </button>
+        </form>
+        <a href="/" className="back-link">
+          &larr; back to homepage
+        </a>
+      </div>
+    </div>
+  );
 };
 
 export default AdminLogin;

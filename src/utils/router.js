@@ -4,7 +4,7 @@ export const ROUTERS = {
         LOGIN:"/loginpage",
         PROFILE: "/profile",
         ADMIN_LOGIN:"/admin/login" ,
-        ADMIN_DASHBOARD:"" ,
+        ADMIN_PRODUCT_PAGE:"/admin/adminproduct" ,
         CART: "/cart/cartpage",
         CLEAN_POLICY: "/policy/cleaning",
         RETURN_POLICY: "/policy/return",
