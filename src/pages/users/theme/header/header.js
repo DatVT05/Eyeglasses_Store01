@@ -58,7 +58,6 @@ const Header = () => {
               </li>
             </ul>
           </li>
-          <li className="nav-item">Best seller</li>
           <li className="nav-item">
             Dịch vụ
             <ul className="dropdown">

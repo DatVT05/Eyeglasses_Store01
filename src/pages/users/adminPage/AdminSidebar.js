@@ -9,8 +9,7 @@ const AdminSidebar = () => {
         <li>Trang chủ</li>
         <li className="active">
           <span>Quản lý sản phẩm</span>
-          <ul className="sub-menu">
-            <li>Thiết lập</li>
+          <ul className="sub-menu">               
             <li>Danh mục</li>
             <li>Tính năng</li>
             <li>Trạng thái</li>
@@ -26,13 +25,13 @@ const AdminSidebar = () => {
             <li>Đơn hàng</li>
             <li className="selected">Danh sách đơn hàng</li>
           </ul>
-        </li>
+        </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
         <li>
           <span>Quản lý đánh giá</span>
           <ul className="sub-menu">
             <li>Đánh giá</li>
             <li>Trạng thái</li>
-            <li>Sản phẩm</li>
+            <li>Sản phẩm</li>     
             <li className="selected">Danh sách đánh giá</li>
           </ul>
         </li>
