@@ -16,11 +16,10 @@ export const ROUTERS = {
         ORDER_DETAIL:"/order/order_detail",
         ORDER_STATUS:"/order/order_status",
         ORDER_TRACKING: "/order/track_order",
-        PRODUCT_INFO: "/product/:productId", 
+        PRODUCT_INFO: "/product/:Id", 
         GLASSES: "/products/glasses",
         LENS: "/products/lens",
-        SUNGLASSES: "/products/sunglasses",
-        SUNGLASSESKID: "/products/sunglasseskid",
+        ACCESSORY: "/products/accessory",
         PAYMENT: "/payment",
         PROMOTIONS: "/promotions",
         COMMENT: "/comment"

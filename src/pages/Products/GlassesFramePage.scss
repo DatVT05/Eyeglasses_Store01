@@ -79,5 +79,13 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
+    .product-grid a {
+      text-decoration: none; 
+      color: inherit; 
+    }
+    
+    .product-grid a:hover {
+      text-decoration: none;
+    }
   }
 }

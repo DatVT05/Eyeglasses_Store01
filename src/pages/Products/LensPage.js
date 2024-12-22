@@ -1,30 +1,43 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Card from "component/card/card";
-import "./LensPage.scss";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Card from 'component/card/card';
+import './LensPage.scss';
 
 const LensPage = () => {
-  const [sortBy, setSortBy] = useState("default");
+  const [sortBy, setSortBy] = useState('default');
+  const [products, setProducts] = useState([]);
 
-  const products = [
-    {
-      id: 1,
-      name: "Tròng kính Chemi U2 Chiết suất 1.67",
-      brand: "Chemi",
-      price: "Liên hệ ngay",
-      img: "path-to-image",
-    },
-    {
-      id: 2,
-      name: "Tròng kính Bevis Optical Chiết suất 1.56",
-      brand: "Bevis",
-      price: "Liên hệ ngay",
-      img: "path-to-image", 
-    },
-  ];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const categoryId = '69a098a4-b270-48ab-a9ae-b367060eb625';
+        const res = await fetch(
+          `http://localhost:3000/product/getAllProduct?categoryId=${categoryId}`,
+        );
+        if (res.ok) {
+          const data = await res.json();
+          setProducts(data);
+        } else {
+          console.error('Failed to fetch products:', res.statusText);
+        }
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleSortChange = (e) => {
     setSortBy(e.target.value);
+    let sortedProducts = [...products];
+    if (e.target.value === 'high-to-low') {
+      sortedProducts.sort((a, b) => b.price - a.price);
+    } else if (e.target.value === 'low-to-high') {
+      sortedProducts.sort((a, b) => a.price - b.price);
+    }
+
+    setProducts(sortedProducts);
   };
 
   return (
@@ -88,17 +101,22 @@ const LensPage = () => {
         </div>
 
         <div className="product-grid">
-          {products.map((product) => (
-            <Card
-            key={product.id}
-            image={product.img}
-            title={product.name}
-            price={product.price}
-            colors={product.colors || []} 
-            features={product.features || []} 
-            code={product.id.toString()}
-          />
-          ))}
+          {products.length > 0 ? (
+            products.map((product) => (
+              <Link key={product.id} to={`/product/${product.id}`}>
+              <Card
+                image={product.img}
+                title={product.name}
+                price={product.price}
+                colors={product.colors || []}
+                features={product.features || []}
+                code={product.id.toString()}
+              />
+            </Link>
+            ))
+          ) : (
+            <p>No products found containing "Tròng kính".</p>
+          )}
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Card from 'component/card/card';
-import './GlassesFramePage.scss';
+import "./AccesoryPage.scss"
 
-const GlassesFramePage = () => {
+const AccessoryPage = () => {
   const [sortBy, setSortBy] = useState('default');
 
   const [products, setProducts] = useState([]);
@@ -11,7 +11,7 @@ const GlassesFramePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const categoryId = '9c851c7d-e2e2-4970-9b84-12c968854e01';
+        const categoryId = '82f32e7e-6973-48d3-8bfd-bdd3cfa292f9';
         const res = await fetch(
           `http://localhost:3000/product/getAllProduct?categoryId=${categoryId}`,
         );
@@ -83,45 +83,6 @@ const GlassesFramePage = () => {
             </li>
           </ul>
         </div>
-
-        <div className="filter">
-          <h3>Hình dáng</h3>
-          <ul>
-            <li>
-              <input type="checkbox" /> Browline
-            </li>
-            <li>
-              <input type="checkbox" /> Chữ nhật
-            </li>
-            <li>
-              <input type="checkbox" /> Oval
-            </li>
-            <li>
-              <input type="checkbox" /> Hình tròn
-            </li>
-            <li>
-              <input type="checkbox" /> Hình vuông
-            </li>
-          </ul>
-        </div>
-
-        <div className="filter">
-          <h3>Tính năng</h3>
-          <ul>
-            <li>
-              <input type="checkbox" /> Đổi màu
-            </li>
-            <li>
-              <input type="checkbox" /> Lọc ánh sáng xanh
-            </li>
-            <li>
-              <input type="checkbox" /> Râm cận
-            </li>
-            <li>
-              <input type="checkbox" /> Siêu mỏng
-            </li>
-          </ul>
-        </div>
       </div>
 
       <div className="product-section">
@@ -138,15 +99,15 @@ const GlassesFramePage = () => {
         <div className="product-grid">
           {products.map((product) => (
             <Link key={product.id} to={`/product/${product.id}`}>
-              <Card
-                image={product.img}
-                title={product.name}
-                price={product.price}
-                colors={product.colors || []}
-                features={product.features || []}
-                code={product.id.toString()}
-              />
-            </Link>
+            <Card
+              image={product.img}
+              title={product.name}
+              price={product.price}
+              colors={product.colors || []}
+              features={product.features || []}
+              code={product.id.toString()}
+            />
+          </Link>
           ))}
         </div>
       </div>
@@ -154,4 +115,4 @@ const GlassesFramePage = () => {
   );
 };
 
-export default GlassesFramePage;
+export default AccessoryPage;

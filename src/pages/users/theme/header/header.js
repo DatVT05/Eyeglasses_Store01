@@ -54,7 +54,7 @@ const Header = () => {
                 <Link to="/products/lens">Tròng kính</Link>
               </li>
               <li>
-                <Link to="/products/sunglasses">Phụ kiện</Link>
+                <Link to="/products/accessory">Phụ kiện</Link>
               </li>
             </ul>
           </li>

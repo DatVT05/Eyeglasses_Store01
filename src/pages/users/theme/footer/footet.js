@@ -26,8 +26,7 @@ const Footer = () => {
             <h3>Sản Phẩm</h3>
             <Link to="/products/glasses">Gọng Kính</Link>
             <Link to="/products/lens">Tròng Kính</Link>
-            <Link to="/products/sunglasses">Kính râm</Link>
-            <Link to="/products/sunglasseskid">Kính râm trẻ em</Link>
+            <Link to="/products/accessory">Phụ kiện</Link>
           </div>
           <div className="footer-links">
             <h3>Thông Tin Liên Hệ</h3>
